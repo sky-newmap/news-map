@@ -1,24 +1,79 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <title>とある地図オタのブログ</title>
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6QSBE5RSXG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+  <meta charset="UTF-8">
+  <title>とある地図オタのブログ</title>
+  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background: linear-gradient(to right, #f48fb1, #fdd835, #81c784);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2em;
+      margin: 0;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
 
-  gtag('config', 'G-6QSBE5RSXG');
-</script>
-  <body>
-<h1>さあ地図を広げよう</h1> 
-<img src ="ワルイコあつまれキャラクター.jpg" width=400 height=200>
-<!-- index.html の一部 -->
-<h2>自己紹介</h2>
-<h3>10代の地図オタ<br>2013年、五人旅やノンストップライブを見て好きになる。<br>2022年、辛い時に彼らに支えられ、本格的な推しに。<br>2025年、元リーダーの報道によりグループは一旦心にしまうことに。<br>NAKAMAに入会し、現在は新しい地図を応援しています。</h3>
-<h2>最新記事</h2>
-<ul>
-  <li><a href="2025-06-10-post.html">2025年6月10日：今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説</a></li>
-</ul>
+    .content-box {
+      background: rgba(255, 255, 255, 0.88);
+      padding: 2em;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    a {
+      color: #005a8d;
+      font-weight: bold;
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #e91e63;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      margin: 1em auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-box">
+    <h1>さあ地図を広げよう</h1>
+    <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
+
+    <h2>自己紹介</h2>
+    <h3>
+      10代の地図オタです。特に草彅くんのドラマが好きです！<br>
+      2013年、五人旅やノンストップライブを見てファンに。<br>
+      2022年、辛い時に彼らに支えられ、本格的に推し活スタート。<br>
+      2025年、元リーダーの報道によりグループは一旦心にしまうことに。<br>
+      現在はNAKAMAに入会し、「新しい地図」を応援中！
+    </h3>
+
+    <h2>最新記事</h2>
+    <ul>
+      <li>
+        <a href="2025-06-10-post.html">
+          2025年6月10日：今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
