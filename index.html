@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>とある地図オタのブログ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: "Hiragino Kaku Gothic ProN", sans-serif;
@@ -26,6 +26,7 @@
       max-width: 520px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
+      transition: transform 0.3s ease;
     }
 
     h1, h2, h3 {
@@ -52,31 +53,9 @@
       border-radius: 12px;
     }
 
-    ul {
-      padding-left: 1.2em;
-    }
-
-    li {
-      margin-bottom: 0.8em;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 0;
-        display: block;
-      }
-
-      .content-box {
-        border-radius: 0;
-        width: 100%;
-        max-width: 100%;
-        padding: 1em;
-        transform: none;
-      }
-    }
-
+    /* PCのみ1.5倍にスケーリング */
     @media (min-width: 800px) {
-     .content-box.scale-up {
+      .content-box {
         transform: scale(1.5);
         transform-origin: top center;
       }
@@ -84,9 +63,9 @@
   </style>
 </head>
 <body>
-  <div class="content-box scale-up">
+  <div class="content-box">
     <h1>さあ地図を広げよう</h1>
-    <img src="ワルイコあつまれキャラクター.jpg" width="480" height="150" alt="キャラクター画像">
+    <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
 
     <h2>自己紹介</h2>
     <h3>
@@ -118,4 +97,3 @@
   </div>
 </body>
 </html>
-
