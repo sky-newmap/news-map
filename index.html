@@ -87,15 +87,20 @@
         transform-origin: top center;
       }
     }
+.nowrap-text {
+  font-size: clamp(14px, 3.5vw, 18px);  /* スマホにも対応する柔軟な文字サイズ */
+  white-space: nowrap;
+}
+
   </style>
 </head>
 <body>
   <div class="content-box">
-    <h1>さあ地図を広げよう</h1>
+    <h1  class="nowrap-text">さあ地図を広げよう</h1>
     <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
 
     <h2>自己紹介</h2>
-    <h3>
+    <h3 class="nowrap-text">
       10代の地図オタです。特に草彅くんが好きです！<br>
       2013年、五人旅やノンストップライブ見て好きに。<br>
       2022年、辛い時に支えられ本格的に推し活スタート。<br>
