@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>とある地図オタのブログ</title>
   <style>
     body {
@@ -22,9 +23,10 @@
       padding: 2em;
       border-radius: 16px;
       width: 100%;
-      max-width: 800px;
+      max-width: 520px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
+      transition: transform 0.3s ease;
     }
 
     h1, h2, h3 {
@@ -50,12 +52,42 @@
       height: auto;
       border-radius: 12px;
     }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    li {
+      margin-bottom: 0.8em;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 0;
+        display: block;
+      }
+
+      .content-box {
+        border-radius: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 1em;
+        transform: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .scale-up {
+        transform: scale(1.5);
+        transform-origin: top center;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="content-box">
+  <div class="content-box scale-up">
     <h1>さあ地図を広げよう</h1>
-    <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
+    <img src="ワルイコあつまれキャラクター.jpg" width="480" height="150" alt="キャラクター画像">
 
     <h2>自己紹介</h2>
     <h3>
@@ -68,15 +100,18 @@
 
     <h2>最新記事</h2>
     <ul>
-    
-    <ul>
-       <li><a href="kusanagitsuyoshi.html">
+      <li>
+        <a href="kusanagitsuyoshi.html">
           2025年6月14日：草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説
-     </li>
-     <li><a href="atarashiichizu_songs.html">
+        </a>
+      </li>
+      <li>
+        <a href="atarashiichizu_songs.html">
           2025年6月13日：新しい地図の楽曲を聴こう！
-     </li>
-      <li>        <a href="2025-06-10-post.html">
+        </a>
+      </li>
+      <li>
+        <a href="2025-06-10-post.html">
           2025年6月12日：今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説
         </a>
       </li>
@@ -84,3 +119,4 @@
   </div>
 </body>
 </html>
+
