@@ -1,153 +1,89 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>とある地図オタのブログ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>さあ地図を広げよう</title>
   <style>
-  body {
-  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-  background: linear-gradient(to right, #f48fb1, #fdd835, #81c784);
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1.5em 1em;
-  margin: 0;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
-.content-box {
-  background: rgba(255, 255, 255, 0.88);
-  padding: 1.5em;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 480px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-/* PCのみ1.5倍にスケーリング */
-@media (min-width: 800px) {
-  .content-box {
-    transform: scale(1.5);
-    transform-origin: top center;
-  }
-}
-
-/* 画像サイズと見た目 */
-img {
-  display: block;
-  margin: 1.2em auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* ヘッダーやリンク文字サイズも調整 */
-h1 {
-  font-size: 1.6em;
-  background: #eee;
-  display: inline-block;
-  padding: 0.2em 0.5em;
-  border-radius: 4px;
-}
-
-h2, h3 {
-  margin-top: 1.4em;
-  font-size: 1.2em;
-}
-
-a {
-  color: #005a8d;
-  font-weight: bold;
-  text-decoration: underline;
-  transition: 0.3s;
-}
-
-a:hover {
-  color: #e91e63;
-  text-decoration: none;
-}
-
-  img {
-    display: block;
-    margin: 1em auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-  }
-
-  /* PCのみ1.5倍にスケーリング */
-  @media (min-width: 800px) {
-    .content-box {
-      transform: scale(1.5);
-      transform-origin: top center;
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(to right, #fda085, #f6d365);
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.8;
+      word-break: keep-all;
     }
-  }
 
-  /* 📱 スマホ調整：左右に背景を少し見せる */
- @media (max-width: 600px) {
-  body {
-    padding: 1.5em 0; /* 上下のみ余白、左右はゼロ */
-    display: flex;
-    justify-content: center;
-  }
+    .container {
+      background: #fdfcf4;
+      margin: 20px;
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
 
-  .content-box {
-    max-width: 92%;  /* ボックスの幅をやや細く */
-    padding: 1.2em;
-    font-size: 15px;  /* 少し小さめの文字サイズに調整 */
-  }
+    h1 {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #333;
+    }
 
-  h1, h2, h3 {
-    font-size: 1.1em;
-    line-height: 1.5;
-  }
-}
+    h2 {
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-top: 1.2em;
+    }
 
-</style>
+    p, li {
+      font-size: 1em;
+      margin-bottom: 0.8em;
+    }
 
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 18px;
+        line-height: 1.9;
+      }
+
+      .container {
+        padding: 20px 16px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="content-box">
+  <div class="container">
     <h1>さあ地図を広げよう</h1>
-    <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
+    <img src="your-image-path.png" alt="新しい地図キャラクター" />
 
     <h2>自己紹介</h2>
-    <h3>
-      10代の地図オタです。特に草彅くんが好きです！<br>
-      2013年、五人旅やノンストップライブ見て好きに。<br>
-      2022年、辛い時に支えられ本格的に推し活スタート。<br>
-      2025年、元リーダーの報道により、グループのことは一旦心にしまうことに。<br>
-      現在はNAKAMAに入会し、「新しい地図」を応援中！
-    </h3>
+    <p>10代の地図オタです。特に草彅くんが好きです！<br>
+    2013年、五人旅やノンストップライブ見て好きに。<br>
+    2022年、辛い時に支えられ本格的に推し活スタート。<br>
+    2025年、元リーダーの報道により、グループのことは一旦心にしまうことに。<br>
+    現在はNAKAMAに入会し、「新しい地図」を応援中！</p>
 
     <h2>最新記事</h2>
     <ul>
-      <li>
-        <a href="inagakigoro.html">
-          2025年6月14日：稲垣吾郎とは？俳優としての魅力・音楽活動・人柄まで徹底解説
-        </a>
-
-      <li>
-        <a href="kusanagitsuyoshi.html">
-          2025年6月14日：草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説
-        </a>
-      </li>
-      <li>
-        <a href="atarashiichizu_songs.html">
-          2025年6月13日：新しい地図の楽曲を聴こう！
-        </a>
-      </li>
-      <li>
-        <a href="2025-06-10-post.html">
-          2025年6月12日：今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説
-        </a>
-      </li>
+      <li><a href="#">2025年6月14日：稲垣吾郎とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a></li>
+      <li><a href="#">2025年6月14日：草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a></li>
+      <li><a href="#">2025年6月13日：新しい地図の楽曲を聴こう！</a></li>
+      <li><a href="#">2025年6月12日：今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説</a></li>
     </ul>
   </div>
 </body>
