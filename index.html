@@ -62,12 +62,25 @@
   }
 
   /* 📱 スマホ調整：左右に背景を少し見せる */
-  @media (max-width: 600px) {
-    .content-box {
-      max-width: 90%;
-      padding: 1.5em;
-    }
+ @media (max-width: 600px) {
+  body {
+    padding: 1.5em 0; /* 上下のみ余白、左右はゼロ */
+    display: flex;
+    justify-content: center;
   }
+
+  .content-box {
+    max-width: 92%;  /* ボックスの幅をやや細く */
+    padding: 1.2em;
+    font-size: 15px;  /* 少し小さめの文字サイズに調整 */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+}
+
 </style>
 
 </head>
