@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>週間オリコンランキング｜年別アーカイブ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #4caf50;
+      --primary-light: #81c784;
+      --text: #333;
+      --bg: #f9f9f9;
+      --radius: 12px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .year-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .year-card {
+      background-color: var(--primary-light);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      border-radius: var(--radius);
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .year-card:hover {
+      background-color: var(--primary);
+    }
+
+    .note {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>週間オリコンランキング<br>年別アーカイブ</h1>
+<!-- admax -->
+<script src="https://adm.shinobi.jp/s/d8202ea884d612a1598678959f9832bb"></script>
+<!-- admax -->
+  <div class="year-grid">
+    <!-- 新しい順に並んだ年リンク -->
+    <a href="2011.html" class="year-card">2011年</a>
+    <a href="2010.html" class="year-card">2010年</a>
+    <a href="2009.html" class="year-card">2009年</a>
+    <a href="2008.html" class="year-card">2008年</a>
+    <a href="2007.html" class="year-card">2007年</a>
+    <a href="2006.html" class="year-card">2006年</a>
+    <a href="2005.html" class="year-card">2005年</a>
+    <a href="2004.html" class="year-card">2004年</a>
+    <a href="2003.html" class="year-card">2003年</a>
+    <a href="2002.html" class="year-card">2002年</a>
+    <a href="2001.html" class="year-card">2001年</a>
+    <a href="2000.html" class="year-card">2000年</a>
+    <a href="1999.html" class="year-card">1999年</a>
+    <a href="1998.html" class="year-card">1998年</a>
+    <a href="1997.html" class="year-card">1997年</a>
+    <a href="1996.html" class="year-card">1996年</a>
+  </div>
+
+  <p class="note">※ 年ごとのランキングは今後追加していく予定です。</p>
+</body>
+</html>
+
