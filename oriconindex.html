@@ -2,101 +2,99 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>週間オリコンランキング｜年別アーカイブ</title>
+  <title>歴代オリコン年間ランキング一覧</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    :root {
-      --primary: #4caf50;
-      --primary-light: #81c784;
-      --text: #333;
-      --bg: #f9f9f9;
-      --radius: 12px;
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 2em 1em;
     }
 
-    body {
-      margin: 0;
-      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 1rem;
+    .container {
+      max-width: 800px;
+      margin: auto;
     }
 
     h1 {
-      font-size: 1.8rem;
       text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .year-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 1rem;
-      width: 100%;
-      max-width: 600px;
+      margin-bottom: 1.5em;
     }
 
     .year-card {
-      background-color: var(--primary-light);
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      border-radius: var(--radius);
-      font-weight: bold;
+      display: block;
+      padding: 1.2em;
+      margin-bottom: 1em;
+      color: white;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      font-size: 1.2em;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.2s ease;
     }
 
     .year-card:hover {
-      background-color: var(--primary);
+      transform: scale(1.03);
+      opacity: 0.9;
     }
 
-    .note {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      text-align: center;
-      color: #666;
+    .y1996 { background: #e53935; }
+    .y1997 { background: #fdd835; color: #333; }
+    .y1998 { background: #1e88e5; }
+    .y1999 { background: #ec407a; }
+    .y2000 { background: #fb8c00; }
+    .y2001 { background: #d32f2f; }
+    .y2002 { background: #43a047; }
+    .y2003 { background: #fbc02d; color: #333; }
+    .y2010 { background: #fb8c00; }
+    .y2011 { background: #c62828; }
+    .ydefault { background: #607d8b; }
+
+    @media (min-width: 768px) {
+      .year-card {
+        font-size: 1.4em;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>週間オリコンランキング<br>年別アーカイブ</h1>
-  <div class="year-grid">
-    <!-- 新しい順に並んだ年リンク -->
-    <a href="2025.html" class="year-card">2025年</a>
-    <a href="2024.html" class="year-card">2024年</a>
-    <a href="2023.html" class="year-card">2023年</a>
-    <a href="2022.html" class="year-card">2022年</a>
-    <a href="2021.html" class="year-card">2021年</a>
-    <a href="2020.html" class="year-card">2020年</a>
-    <a href="2019.html" class="year-card">2019年</a>
-    <a href="2018.html" class="year-card">2018年</a>
-    <a href="2017.html" class="year-card">2017年</a>
-    <a href="2016.html" class="year-card">2016年</a>
-    <a href="2015.html" class="year-card">2015年</a>
-    <a href="2014.html" class="year-card">2014年</a>
-    <a href="2013.html" class="year-card">2013年</a>
-    <a href="2012.html" class="year-card">2012年</a>
-    <a href="2011.html" class="year-card">2011年</a>
-    <a href="2010.html" class="year-card">2010年</a>
-    <a href="2009.html" class="year-card">2009年</a>
-    <a href="2008.html" class="year-card">2008年</a>
-    <a href="2007.html" class="year-card">2007年</a>
-    <a href="2006.html" class="year-card">2006年</a>
-    <a href="2005.html" class="year-card">2005年</a>
-    <a href="2004.html" class="year-card">2004年</a>
-    <a href="2003.html" class="year-card">2003年</a>
-    <a href="2002.html" class="year-card">2002年</a>
-    <a href="2001.html" class="year-card">2001年</a>
-    <a href="2000.html" class="year-card">2000年</a>
-    <a href="1999.html" class="year-card">1999年</a>
-    <a href="1998.html" class="year-card">1998年</a>
-    <a href="1997.html" class="year-card">1997年</a>
-    <a href="1996.html" class="year-card">1996年</a>
-  </div>
-  <p class="note">※ 年ごとのランキングは今後追加していく予定です。</p>                       
+  <div class="container">
+    <h1>歴代オリコン年間ランキング</h1>
+    
+    <a href="oricon1996.html" class="year-card y1996">1996年のランキングを見る</a>
+    <a href="oricon1997.html" class="year-card y1997">1997年のランキングを見る</a>
+    <a href="oricon1998.html" class="year-card y1998">1998年のランキングを見る</a>
+    <a href="oricon1999.html" class="year-card y1999">1999年のランキングを見る</a>
+    <a href="oricon2000.html" class="year-card y2000">2000年のランキングを見る</a>
+    <a href="oricon2001.html" class="year-card y2001">2001年のランキングを見る</a>
+    <a href="oricon2002.html" class="year-card y2002">2002年のランキングを見る</a>
+    <a href="oricon2003.html" class="year-card y2003">2003年のランキングを見る</a>
+    <a href="oricon2010.html" class="year-card y2010">2010年のランキングを見る</a>
+    <a href="oricon2011.html" class="year-card y2011">2011年のランキングを見る</a>
+
+    <!-- おまかせ色（デフォルト） -->
+    <a href="oricon2004.html" class="year-card ydefault">2004年のランキングを見る</a>
+    <a href="oricon2005.html" class="year-card ydefault">2005年のランキングを見る</a>
+    <a href="oricon2006.html" class="year-card ydefault">2006年のランキングを見る</a>
+    <a href="oricon2007.html" class="year-card ydefault">2007年のランキングを見る</a>
+    <a href="oricon2008.html" class="year-card ydefault">2008年のランキングを見る</a>
+    <a href="oricon2009.html" class="year-card ydefault">2009年のランキングを見る</a>
+    <a href="oricon2012.html" class="year-card ydefault">2012年のランキングを見る</a>
+    <a href="oricon2013.html" class="year-card ydefault">2013年のランキングを見る</a>
+    <a href="oricon2014.html" class="year-card ydefault">2014年のランキングを見る</a>
+    <a href="oricon2015.html" class="year-card ydefault">2015年のランキングを見る</a>
+    <a href="oricon2016.html" class="year-card ydefault">2016年のランキングを見る</a>
+    <a href="oricon2017.html" class="year-card ydefault">2017年のランキングを見る</a>
+    <a href="oricon2018.html" class="year-card ydefault">2018年のランキングを見る</a>
+    <a href="oricon2019.html" class="year-card ydefault">2019年のランキングを見る</a>
+    <a href="oricon2020.html" class="year-card ydefault">2020年のランキングを見る</a>
+    <a href="oricon2021.html" class="year-card ydefault">2021年のランキングを見る</a>
+    <a href="oricon2022.html" class="year-card ydefault">2022年のランキングを見る</a>
+    <a href="oricon2023.html" class="year-card ydefault">2023年のランキングを見る</a>
+    <a href="oricon2024.html" class="year-card ydefault">2024年のランキングを見る</a>
+
+                   
  <!-- admax -->
 <script src="https://adm.shinobi.jp/s/4db8a0d8a13b68efd3d73d00f729759c"></script>
 <!-- admax -->
@@ -106,6 +104,7 @@
   <!-- admax -->
 <script src="https://adm.shinobi.jp/s/146384689e01a442a2ff09f675eef8e5"></script>
 <!-- admax -->
+ </div>
 </body>
 </html>
 
