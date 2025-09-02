@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>とある地図オタのブログ</title>
-<link rel="icon" href="favicon-v2.ico" type="image/x-icon">
+  <link rel="icon" href="favicon-v2.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -28,6 +28,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
       transition: transform 0.3s ease;
+      margin: auto; /* 中央寄せ */
     }
 
     h1, h2, h3 {
@@ -61,7 +62,6 @@
       border-radius: 6px;
     }
 
-    /*  PCのみ1.5倍にスケーリング */
     @media (min-width: 800px) {
       .content-box {
         transform: scale(1.5);
@@ -74,35 +74,35 @@
   <div class="content-box">
     <h1>さあ地図を広げよう</h1>
     <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
-<h2>NAKAMAのコミュニティサイトにリニューアル！</h2>
+    <h2>NAKAMAのコミュニティサイトにリニューアル！</h2>
 
-<!-- ログインフォーム -->
-<div id="login-section">
-  <h2>ログイン</h2>
-  <input type="text" id="username" placeholder="ユーザー名"><br><br>
-  <label for="color">メンバーカラーを選択：</label>
-  <select id="color">
-    <option value="#e91e63">稲垣吾郎（ピンク）</option>
-    <option value="#fdd835">草彅剛（黄）</option>
-    <option value="#4caf50">香取慎吾（緑）</option>
-    <option value="#f44336">赤</option>
-    <option value="#2196f3">青</option>
-  </select><br><br>
-  <button onclick="login()">ログイン</button>
-</div>
+    <!-- ログインフォーム -->
+    <div id="login-section">
+      <h2>ログイン</h2>
+      <input type="text" id="username" placeholder="ユーザー名"><br><br>
+      <label for="color">メンバーカラーを選択：</label>
+      <select id="color">
+        <option value="#e91e63">稲垣吾郎（ピンク）</option>
+        <option value="#fdd835">草彅剛（黄）</option>
+        <option value="#4caf50">香取慎吾（緑）</option>
+        <option value="#f44336">赤</option>
+        <option value="#2196f3">青</option>
+      </select><br><br>
+      <button onclick="login()">ログイン</button>
+    </div>
 
-<!-- コメントフォーム -->
-<div id="comment-section" style="display:none;">
-  <h2>コメント</h2>
-  <textarea id="commentText" placeholder="コメントを入力してください"></textarea><br>
-  <button onclick="postComment()">投稿</button>
-</div>
+    <!-- コメントフォーム -->
+    <div id="comment-section" style="display:none;">
+      <h2>コメント</h2>
+      <textarea id="commentText" placeholder="コメントを入力してください"></textarea><br>
+      <button onclick="postComment()">投稿</button>
+    </div>
 
-<!-- コメント一覧 -->
-<div id="comments">
-  <h2>コメント一覧</h2>
-  <ul id="commentList"></ul>
-</div>
+    <!-- コメント一覧 -->
+    <div id="comments">
+      <h2>コメント一覧</h2>
+      <ul id="commentList"></ul>
+    </div>
 
     <h2>管理人紹介</h2>
     <h3>
@@ -117,10 +117,10 @@
         <a href="NAKAMAtoMEETINGVol4.html">
           2025年6月23日：【参戦レポ】NAKAMA to MEETING Vol.4 大阪 行ってきました！
         </a>
-　　　</li>
-       </ul>
-    
- <h2>「新しい地図」の解説記事</h2>
+      </li>
+    </ul>
+
+    <h2>「新しい地図」の解説記事</h2>
     <ul> 
       <li>
         <a href="2025-06-10-post.html">
@@ -131,43 +131,43 @@
         <a href="inagakigoro.html">
           稲垣吾郎とは？俳優としての魅力・音楽活動・人柄まで徹底解説
         </a>
-
+      </li>
       <li>
         <a href="kusanagitsuyoshi.html">
          草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説
         </a>
       </li>
-       <a href="katorishingo.html">
+      <li>
+        <a href="katorishingo.html">
           香取慎吾とは？俳優としての魅力・音楽活動・人柄まで徹底解説
         </a>
+      </li>
       <li>
         <a href="atarashiichizu_songs.html">
           新しい地図の楽曲を聴こう！
         </a>
       </li>
-       </ul>
-  
-  <!-- admax -->
-<script src="https://adm.shinobi.jp/s/4db8a0d8a13b68efd3d73d00f729759c"></script>
-<!-- admax -->
- 
+    </ul>
+
+    <!-- admax -->
+    <script src="https://adm.shinobi.jp/s/4db8a0d8a13b68efd3d73d00f729759c"></script>
+    <!-- admax -->
   </div>
+
 <script>
   let currentUser = null;
-  let currentColor = "#333"; // デフォルト色
-  let comments = [];
+  let currentColor = "#333";
 
   // ログイン処理
   function login() {
     const username = document.getElementById("username").value.trim();
     const color = document.getElementById("color").value;
-
     if (username) {
       currentUser = username;
       currentColor = color;
       document.getElementById("login-section").style.display = "none";
       document.getElementById("comment-section").style.display = "block";
-      alert(username + " さんとしてログインしました！（色付き）");
+      alert(username + " さんとしてログインしました！");
     }
   }
 
@@ -175,7 +175,9 @@
   function postComment() {
     const text = document.getElementById("commentText").value.trim();
     if (text && currentUser) {
-      comments.push({ user: currentUser, text, color: currentColor });
+      let comments = JSON.parse(localStorage.getItem("comments")) || [];
+      comments.push({ user: currentUser, text: text, color: currentColor });
+      localStorage.setItem("comments", JSON.stringify(comments));
       document.getElementById("commentText").value = "";
       renderComments();
     }
@@ -183,52 +185,21 @@
 
   // コメント表示
   function renderComments() {
+    let comments = JSON.parse(localStorage.getItem("comments")) || [];
     const list = document.getElementById("commentList");
     list.innerHTML = "";
     comments.forEach(c => {
       const li = document.createElement("li");
       li.className = "comment";
-      li.style.borderLeft = "6px solid " + c.color; // メンバーカラーを反映
+      li.style.borderLeft = "6px solid " + c.color;
       li.innerHTML = `<strong style="color:${c.color}">${c.user}</strong>: ${c.text}`;
-      list.appendChild(li);
-    });
-  }
-</script>
-<script>
-  // コメントを保存する
-  function saveComment(username, text) {
-    let comments = JSON.parse(localStorage.getItem("comments")) || [];
-    comments.push({ user: username, text: text });
-    localStorage.setItem("comments", JSON.stringify(comments));
-    displayComments();
-  }
-
-  // コメントを表示する
-  function displayComments() {
-    let comments = JSON.parse(localStorage.getItem("comments")) || [];
-    let list = document.getElementById("commentList");
-    list.innerHTML = "";
-    comments.forEach(c => {
-      let li = document.createElement("li");
-      li.textContent = c.user + " : " + c.text;
       list.appendChild(li);
     });
   }
 
   // ページ読み込み時に表示
-  window.onload = displayComments;
+  window.onload = renderComments;
 </script>
-
-<div>
-  <input id="username" placeholder="名前">
-  <input id="comment" placeholder="コメント">
-  <button onclick="saveComment(
-      document.getElementById('username').value,
-      document.getElementById('comment').value
-    )">送信</button>
-</div>
-<ul id="commentList"></ul>
 
 </body>
 </html>
-
