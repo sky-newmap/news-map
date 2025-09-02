@@ -194,6 +194,41 @@
     });
   }
 </script>
+<script>
+  // コメントを保存する
+  function saveComment(username, text) {
+    let comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.push({ user: username, text: text });
+    localStorage.setItem("comments", JSON.stringify(comments));
+    displayComments();
+  }
+
+  // コメントを表示する
+  function displayComments() {
+    let comments = JSON.parse(localStorage.getItem("comments")) || [];
+    let list = document.getElementById("commentList");
+    list.innerHTML = "";
+    comments.forEach(c => {
+      let li = document.createElement("li");
+      li.textContent = c.user + " : " + c.text;
+      list.appendChild(li);
+    });
+  }
+
+  // ページ読み込み時に表示
+  window.onload = displayComments;
+</script>
+
+<div>
+  <input id="username" placeholder="名前">
+  <input id="comment" placeholder="コメント">
+  <button onclick="saveComment(
+      document.getElementById('username').value,
+      document.getElementById('comment').value
+    )">送信</button>
+</div>
+<ul id="commentList"></ul>
 
 </body>
 </html>
+
