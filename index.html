@@ -2,204 +2,112 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>とある地図オタのブログ</title>
-  <link rel="icon" href="favicon-v2.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>簡易ファンコミュニティ</title>
   <style>
     body {
-      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-      background: linear-gradient(to right, #f48fb1, #fdd835, #81c784);
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 2em;
-      margin: 0;
-      min-height: 100vh;
-      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 20px;
     }
-
-    .content-box {
-      background: rgba(255, 255, 255, 0.88);
-      padding: 2em;
-      border-radius: 16px;
+    #login, #comment-section {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    input, textarea, button {
       width: 100%;
-      max-width: 520px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      box-sizing: border-box;
-      transition: transform 0.3s ease;
-      margin: auto; /* 中央寄せ */
-    }
-
-    h1, h2, h3 {
-      margin-top: 0;
-    }
-
-    a {
-      color: #005a8d;
-      font-weight: bold;
-      text-decoration: underline;
-      transition: 0.3s;
-    }
-
-    a:hover {
-      color: #e91e63;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      margin: 1em auto;
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
-
-    /* コメント枠 */
-    .comment {
-      padding: 5px;
+      padding: 8px;
       margin: 5px 0;
-      border-radius: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
-
-    @media (min-width: 800px) {
-      .content-box {
-        transform: scale(1.5);
-        transform-origin: top center;
-      }
+    #comments {
+      margin-top: 15px;
+    }
+    .comment {
+      background: #eaf5ff;
+      border-left: 4px solid #2196f3;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .comment strong {
+      color: #1976d2;
     }
   </style>
 </head>
 <body>
-  <div class="content-box">
-    <h1>さあ地図を広げよう</h1>
-    <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
-    <h2>NAKAMAのコミュニティサイトにリニューアル！</h2>
 
-    <!-- ログインフォーム -->
-    <div id="login-section">
-      <h2>ログイン</h2>
-      <input type="text" id="username" placeholder="ユーザー名"><br><br>
-      <label for="color">メンバーカラーを選択：</label>
-      <select id="color">
-        <option value="#e91e63">稲垣吾郎（ピンク）</option>
-        <option value="#fdd835">草彅剛（黄）</option>
-        <option value="#4caf50">香取慎吾（緑）</option>
-        <option value="#f44336">赤</option>
-        <option value="#2196f3">青</option>
-      </select><br><br>
-      <button onclick="login()">ログイン</button>
-    </div>
-
-    <!-- コメントフォーム -->
-    <div id="comment-section" style="display:none;">
-      <h2>コメント</h2>
-      <textarea id="commentText" placeholder="コメントを入力してください"></textarea><br>
-      <button onclick="postComment()">投稿</button>
-    </div>
-
-    <!-- コメント一覧 -->
-    <div id="comments">
-      <h2>コメント一覧</h2>
-      <ul id="commentList"></ul>
-    </div>
-
-    <h2>管理人紹介</h2>
-    <h3>
-      10代の地図オタです。特につよぽんが好きです！<br>
-      2013年、五人旅やノンストップライブを見て好きに。<br>
-      2022年、辛い時に支えられ本格的に推し活スタート。<br>
-      現在はNAKAMAに入会し、「新しい地図」を応援中！
-    </h3>
-    <h2>最新記事</h2>
-    <ul>
-      <li>
-        <a href="NAKAMAtoMEETINGVol4.html">
-          2025年6月23日：【参戦レポ】NAKAMA to MEETING Vol.4 大阪 行ってきました！
-        </a>
-      </li>
-    </ul>
-
-    <h2>「新しい地図」の解説記事</h2>
-    <ul> 
-      <li>
-        <a href="2025-06-10-post.html">
-         今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説
-        </a>
-      </li>
-      <li>
-        <a href="inagakigoro.html">
-          稲垣吾郎とは？俳優としての魅力・音楽活動・人柄まで徹底解説
-        </a>
-      </li>
-      <li>
-        <a href="kusanagitsuyoshi.html">
-         草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説
-        </a>
-      </li>
-      <li>
-        <a href="katorishingo.html">
-          香取慎吾とは？俳優としての魅力・音楽活動・人柄まで徹底解説
-        </a>
-      </li>
-      <li>
-        <a href="atarashiichizu_songs.html">
-          新しい地図の楽曲を聴こう！
-        </a>
-      </li>
-    </ul>
-
-    <!-- admax -->
-    <script src="https://adm.shinobi.jp/s/4db8a0d8a13b68efd3d73d00f729759c"></script>
-    <!-- admax -->
+  <!-- ログイン部分 -->
+  <div id="login">
+    <h2>ログイン</h2>
+    <input type="text" id="username" placeholder="ユーザー名を入力">
+    <button onclick="login()">ログイン</button>
   </div>
 
-<script>
-  let currentUser = null;
-  let currentColor = "#333";
+  <!-- コメント部分 -->
+  <div id="comment-section" style="display:none;">
+    <h2>コメント投稿</h2>
+    <textarea id="commentText" placeholder="コメントを入力"></textarea>
+    <button onclick="postComment()">投稿</button>
+    <h3>コメント一覧</h3>
+    <div id="comments"></div>
+  </div>
 
-  // ログイン処理
-  function login() {
-    const username = document.getElementById("username").value.trim();
-    const color = document.getElementById("color").value;
-    if (username) {
-      currentUser = username;
-      currentColor = color;
-      document.getElementById("login-section").style.display = "none";
-      document.getElementById("comment-section").style.display = "block";
-      alert(username + " さんとしてログインしました！");
+  <script>
+    let currentUser = null;
+
+    // ログイン処理
+    function login() {
+      const username = document.getElementById("username").value.trim();
+      if (username) {
+        currentUser = username;
+        document.getElementById("login").style.display = "none";
+        document.getElementById("comment-section").style.display = "block";
+        loadComments(); // コメント読み込み
+      } else {
+        alert("ユーザー名を入力してください");
+      }
     }
-  }
 
-  // コメント投稿処理
-  function postComment() {
-    const text = document.getElementById("commentText").value.trim();
-    if (text && currentUser) {
-      let comments = JSON.parse(localStorage.getItem("comments")) || [];
-      comments.push({ user: currentUser, text: text, color: currentColor });
-      localStorage.setItem("comments", JSON.stringify(comments));
-      document.getElementById("commentText").value = "";
-      renderComments();
+    // コメント投稿
+    function postComment() {
+      const text = document.getElementById("commentText").value.trim();
+      if (text && currentUser) {
+        const newComment = {
+          user: currentUser,
+          text: text,
+          time: new Date().toLocaleString()
+        };
+
+        let comments = JSON.parse(localStorage.getItem("comments")) || [];
+        comments.unshift(newComment); // 新しいコメントを先頭に追加
+        localStorage.setItem("comments", JSON.stringify(comments));
+
+        document.getElementById("commentText").value = "";
+        loadComments();
+      }
     }
-  }
 
-  // コメント表示
-  function renderComments() {
-    let comments = JSON.parse(localStorage.getItem("comments")) || [];
-    const list = document.getElementById("commentList");
-    list.innerHTML = "";
-    comments.forEach(c => {
-      const li = document.createElement("li");
-      li.className = "comment";
-      li.style.borderLeft = "6px solid " + c.color;
-      li.innerHTML = `<strong style="color:${c.color}">${c.user}</strong>: ${c.text}`;
-      list.appendChild(li);
-    });
-  }
+    // コメント表示
+    function loadComments() {
+      const comments = JSON.parse(localStorage.getItem("comments")) || [];
+      const commentsDiv = document.getElementById("comments");
+      commentsDiv.innerHTML = "";
 
-  // ページ読み込み時に表示
-  window.onload = renderComments;
-</script>
+      comments.forEach(comment => {
+        const div = document.createElement("div");
+        div.classList.add("comment");
+        div.innerHTML = `<strong>${comment.user}</strong> (${comment.time})<br>${comment.text}`;
+        commentsDiv.appendChild(div);
+      });
+    }
+  </script>
 
 </body>
 </html>
+
+
