@@ -68,9 +68,26 @@
     <h1>さあ地図を広げよう</h1>
     <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
 <h2>NAKAMAのコミュニティサイトにリニューアル！</h2>
-    <h3>
-      現在制作中。
-    </h3>
+<!-- ログインフォーム -->
+<div id="login-section">
+  <h2>ログイン</h2>
+  <input type="text" id="username" placeholder="ユーザー名">
+  <button onclick="login()">ログイン</button>
+</div>
+
+<!-- コメントフォーム -->
+<div id="comment-section" style="display:none;">
+  <h2>コメント</h2>
+  <textarea id="commentText" placeholder="コメントを入力してください"></textarea><br>
+  <button onclick="postComment()">投稿</button>
+</div>
+
+<!-- コメント一覧 -->
+<div id="comments">
+  <h2>コメント一覧</h2>
+  <ul id="commentList"></ul>
+</div>
+
     <h2>管理人紹介</h2>
     <h3>
       10代の地図オタです。特につよぽんが好きです！<br>
@@ -119,9 +136,46 @@
 <!-- admax -->
  
   </div>
+<script>
+  let currentUser = null;
+  let comments = [];
+
+  // ログイン処理
+  function login() {
+    const username = document.getElementById("username").value.trim();
+    if (username) {
+      currentUser = username;
+      document.getElementById("login-section").style.display = "none";
+      document.getElementById("comment-section").style.display = "block";
+      alert(username + " さんとしてログインしました！");
+    }
+  }
+
+  // コメント投稿処理
+  function postComment() {
+    const text = document.getElementById("commentText").value.trim();
+    if (text && currentUser) {
+      comments.push({ user: currentUser, text });
+      document.getElementById("commentText").value = "";
+      renderComments();
+    }
+  }
+
+  // コメント表示
+  function renderComments() {
+    const list = document.getElementById("commentList");
+    list.innerHTML = "";
+    comments.forEach(c => {
+      const li = document.createElement("li");
+      li.textContent = c.user + ": " + c.text;
+      list.appendChild(li);
+    });
+  }
+</script>
 
 </body>
 </html>
+
 
 
 
