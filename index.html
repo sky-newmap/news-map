@@ -54,6 +54,13 @@
       border-radius: 12px;
     }
 
+    /* コメント枠 */
+    .comment {
+      padding: 5px;
+      margin: 5px 0;
+      border-radius: 6px;
+    }
+
     /*  PCのみ1.5倍にスケーリング */
     @media (min-width: 800px) {
       .content-box {
@@ -68,10 +75,19 @@
     <h1>さあ地図を広げよう</h1>
     <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
 <h2>NAKAMAのコミュニティサイトにリニューアル！</h2>
+
 <!-- ログインフォーム -->
 <div id="login-section">
   <h2>ログイン</h2>
-  <input type="text" id="username" placeholder="ユーザー名">
+  <input type="text" id="username" placeholder="ユーザー名"><br><br>
+  <label for="color">メンバーカラーを選択：</label>
+  <select id="color">
+    <option value="#e91e63">稲垣吾郎（ピンク）</option>
+    <option value="#fdd835">草彅剛（黄）</option>
+    <option value="#4caf50">香取慎吾（緑）</option>
+    <option value="#f44336">赤</option>
+    <option value="#2196f3">青</option>
+  </select><br><br>
   <button onclick="login()">ログイン</button>
 </div>
 
@@ -138,16 +154,20 @@
   </div>
 <script>
   let currentUser = null;
+  let currentColor = "#333"; // デフォルト色
   let comments = [];
 
   // ログイン処理
   function login() {
     const username = document.getElementById("username").value.trim();
+    const color = document.getElementById("color").value;
+
     if (username) {
       currentUser = username;
+      currentColor = color;
       document.getElementById("login-section").style.display = "none";
       document.getElementById("comment-section").style.display = "block";
-      alert(username + " さんとしてログインしました！");
+      alert(username + " さんとしてログインしました！（色付き）");
     }
   }
 
@@ -155,7 +175,7 @@
   function postComment() {
     const text = document.getElementById("commentText").value.trim();
     if (text && currentUser) {
-      comments.push({ user: currentUser, text });
+      comments.push({ user: currentUser, text, color: currentColor });
       document.getElementById("commentText").value = "";
       renderComments();
     }
@@ -167,7 +187,9 @@
     list.innerHTML = "";
     comments.forEach(c => {
       const li = document.createElement("li");
-      li.textContent = c.user + ": " + c.text;
+      li.className = "comment";
+      li.style.borderLeft = "6px solid " + c.color; // メンバーカラーを反映
+      li.innerHTML = `<strong style="color:${c.color}">${c.user}</strong>: ${c.text}`;
       list.appendChild(li);
     });
   }
@@ -175,9 +197,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
