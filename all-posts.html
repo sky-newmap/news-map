@@ -3,27 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <title>すべての記事一覧</title>
-  <link rel="icon" href="favicon-v2.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: "Hiragino Sans","Meiryo",sans-serif; line-height: 1.8; margin: 20px; background: #f9f9f9; }
-    h1 { color: #222; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 10px 0; }
-    a { text-decoration: none; color: #0066cc; }
-    a:hover { text-decoration: underline; }
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background: linear-gradient(to right, #f48fb1, #fdd835, #81c784);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2em;
+      margin: 0;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    .content-box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2em;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 900px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5em;
+    }
+    .post-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.2em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .post-card a {
+      color: #005a8d;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .post-card a:hover {
+      color: #e91e63;
+    }
+    small {
+      display: block;
+      margin-top: 0.5em;
+      color: #777;
+      font-size: 0.85em;
+    }
+    /* PCは1.2倍スケーリング */
+    @media (min-width: 800px) {
+      .content-box {
+        transform: scale(1.2);
+        transform-origin: top center;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>すべての記事一覧</h1>
-  <ul>
-    <li><a href="2025-06-10-post.html">今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説</a></li>
-    <li><a href="inagakigoro.html">稲垣吾郎とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a></li>
-    <li><a href="kusanagitsuyoshi.html">草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a></li>
-    <li><a href="katorishingo.html">香取慎吾とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a></li>
-    <li><a href="atarashiichizu_songs.html">新しい地図の楽曲を聴こう！</a></li>
-    <li><a href="cccd.html">CCCD(コピーコントロールCD)とは？日本での導入と問題点、そして撤退まで</a></li>
-  </ul>
-  <p><a href="index.html">← トップページへ戻る</a></p>
+  <div class="content-box">
+    <h1>📝 すべての記事一覧</h1>
+
+    <div class="post-grid">
+      <div class="post-card">
+        <a href="cccd.html">CCCD(コピーコントロールCD)とは？日本での導入と問題点、そして撤退まで</a>
+        <small>投稿日：2025年9月4日</small>
+      </div>
+      <div class="post-card">
+        <a href="kusanagitsuyoshi.html">草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a>
+        <small>投稿日：2025年6月14日</small>
+      </div>
+      <div class="post-card">
+        <a href="inagakigoro.html">稲垣吾郎とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a>
+        <small>投稿日：2025年6月14日</small>
+      </div>
+      <div class="post-card">
+        <a href="katorishingo.html">香取慎吾とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a>
+        <small>投稿日：2025年6月14日</small>
+      </div>
+      <div class="post-card">
+        <a href="atarashiichizu_songs.html">新しい地図の楽曲を聴こう！</a>
+        <small>投稿日：2025年6月13日</small>
+      </div>
+      <div class="post-card">
+        <a href="2025-06-10-post.html">今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説</a>
+        <small>投稿日：2025年6月10日</small>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
