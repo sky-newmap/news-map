@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>My Blog</title>
+  <title>ホーム</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -11,34 +11,56 @@
       color: #333;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
       padding: 2em;
       margin: 0;
-      min-height: 100vh;
       box-sizing: border-box;
     }
     .content-box {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.88);
       padding: 2em;
       border-radius: 16px;
       width: 100%;
-      max-width: 900px;
+      max-width: 520px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 1.5em;
+    h1, h2, h3 {
+      margin-top: 0;
     }
-    .post-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    a {
+      color: #005a8d;
+      font-weight: bold;
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: #e91e63;
+      text-decoration: none;
+    }
+    img {
+      display: block;
+      margin: 1em auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    /* PCのみ1.5倍にスケーリング */
+    @media (min-width: 800px) {
+      .content-box {
+        transform: scale(1.5);
+        transform-origin: top center;
+      }
+    }
+    /* 記事カード */
+    .post-list {
+      display: flex;
+      flex-direction: column;
       gap: 1.5em;
     }
     .post-card {
       background: #fff;
       border-radius: 12px;
-      padding: 1.2em;
+      overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -46,60 +68,102 @@
       transform: translateY(-4px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    .post-card a {
-      color: #005a8d;
-      font-weight: bold;
-      text-decoration: none;
+    .post-card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
     }
-    .post-card a:hover {
-      color: #e91e63;
+    .post-content {
+      padding: 0.5em 1em 1em 1em;
     }
     small {
       display: block;
-      margin-top: 0.5em;
+      margin-top: 0.25em;
       color: #777;
       font-size: 0.85em;
-    }
-    /* PCは1.2倍スケーリング */
-    @media (min-width: 800px) {
-      .content-box {
-        transform: scale(1.2);
-        transform-origin: top center;
-      }
     }
   </style>
 </head>
 <body>
   <div class="content-box">
-    <h1>📝 すべての記事一覧</h1>
+    <h1>ポートフォリオ</h1>
+    <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
 
-    <div class="post-grid">
-      <div class="post-card">
-        <a href="cccd.html">CCCD(コピーコントロールCD)とは？日本での導入と問題点、そして撤退まで</a>
-        <small>投稿日：2025年9月4日</small>
-      </div>
-      <div class="post-card">
-        <a href="kusanagitsuyoshi.html">草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a>
-        <small>投稿日：2025年6月14日</small>
-      </div>
-      <div class="post-card">
-        <a href="inagakigoro.html">稲垣吾郎とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a>
-        <small>投稿日：2025年6月14日</small>
-      </div>
-      <div class="post-card">
-        <a href="katorishingo.html">香取慎吾とは？俳優としての魅力・音楽活動・人柄まで徹底解説</a>
-        <small>投稿日：2025年6月14日</small>
-      </div>
-      <div class="post-card">
-        <a href="atarashiichizu_songs.html">新しい地図の楽曲を聴こう！</a>
-        <small>投稿日：2025年6月13日</small>
-      </div>
-      <div class="post-card">
-        <a href="2025-06-10-post.html">今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説</a>
-        <small>投稿日：2025年6月10日</small>
-      </div>
+    <h2>自己紹介</h2>
+    <h3>
+      19歳の大学生です！<br>
+      現在は学生をしながらフリーランスとして働けるよう<br>
+      プログラミングを軸に様々なことに挑戦中です。<br>
+      お仕事のご依頼お待ちしております！<br>
+      ご連絡先：tianbianxiaomi@gmail.com
+    </h3>
+    
+    <h2>主な実績、資格など</h2>
+    <ul>
+      <li>HTML+CSSでブログを作成&運営</li>
+      <li>Youtubeチャンネル収益化条件達成</li>
+      <li>自身作曲の曲を音楽配信サービスにて配信</li>
+      <li>日本化粧品検定３級 etc…</li>
+    </ul>
+
+    <h2>趣味、好きなもの</h2>
+    <ul>
+      <li>ネットサーフィン</li>
+      <li>都市探索</li>
+      <li>デジタル機器(PC,iphone,AV機器)</li>
+      <li>韓国語勉強</li>
+      <li>SMAP(新しい地図FC会員)</li>
+      <li>Kpop(LE SSERAFIM, TWICE)</li>
+    </ul>
+    
+    <h2>Release</h2>
+    <div style="position:relative;width:100%;max-width:448px;aspect-ratio:16/9;margin:auto;">
+      <iframe
+        src="https://www.youtube.com/embed/wokHd437IAk?si=URZKP5p-5cPqrZUH"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        style="position:absolute;inset:0;width:100%;height:100%;border:0;">
+      </iframe>
     </div>
+
+    <h2>My Blog</h2>
+    <div id="postList" class="post-list"></div>
+    <p style="margin-top:1em;"><a href="all-posts.html">👉 すべての記事を見る</a></p>
   </div>
+
+  <script>
+    // 記事データ（サムネ画像は適宜差し替え）
+    const posts = [
+      {title: "CCCD(コピーコントロールCD)とは？日本での導入と問題点、そして撤退まで", url:"cccd.html", date:"2025-09-04", img:"thumbs/cccd.jpg"},
+      {title: "草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説", url:"kusanagitsuyoshi.html", date:"2025-06-14", img:"thumbs/kusanagi.jpg"},
+      {title: "稲垣吾郎とは？俳優としての魅力・音楽活動・人柄まで徹底解説", url:"inagakigoro.html", date:"2025-06-14", img:"thumbs/inagaki.jpg"},
+      {title: "香取慎吾とは？俳優としての魅力・音楽活動・人柄まで徹底解説", url:"katorishingo.html", date:"2025-06-14", img:"thumbs/katori.jpg"},
+      {title: "新しい地図の楽曲を聴こう！", url:"atarashiichizu_songs.html", date:"2025-06-13", img:"thumbs/songs.jpg"},
+      {title: "今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説", url:"2025-06-10-post.html", date:"2025-06-10", img:"thumbs/atarashiichizu.jpg"}
+    ];
+
+    // 日付で降順ソート
+    posts.sort((a,b) => new Date(b.date) - new Date(a.date));
+
+    const postList = document.getElementById("postList");
+    posts.forEach(post => {
+      const card = document.createElement("div");
+      card.className = "post-card";
+      card.innerHTML = `
+        <a href="${post.url}">
+          <img src="${post.img}" alt="${post.title}">
+        </a>
+        <div class="post-content">
+          <a href="${post.url}">${post.title}</a>
+          <small>投稿日：${post.date}</small>
+        </div>
+      `;
+      postList.appendChild(card);
+    });
+  </script>
 </body>
 </html>
-
