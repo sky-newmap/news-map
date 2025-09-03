@@ -20,7 +20,7 @@
       padding: 2em;
       border-radius: 16px;
       width: 100%;
-      max-width: 520px; /* index と同じ */
+      max-width: 1200px; /* 3列表示用に広め */
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
     }
@@ -39,10 +39,9 @@
       text-decoration: none;
     }
     .post-list {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr; /* 初期は1列 */
       gap: 1.5em;
-      justify-content: center;
       margin-top: 2em;
     }
     .post-card {
@@ -51,8 +50,6 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       transition: transform 0.2s, box-shadow 0.2s;
-      flex: 1 1 calc(100%); /* 初期は1列 */
-      max-width: 520px; /* index と同じ横幅 */
     }
     .post-card:hover {
       transform: translateY(-4px);
@@ -76,8 +73,8 @@
 
     /* PC表示で3列 */
     @media (min-width: 900px) {
-      .post-card {
-        flex: 1 1 calc((520px - 2em) / 3); /* カード幅を3分割調整 */
+      .post-list {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   </style>
