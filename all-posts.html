@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ホーム</title>
+  <title>ブログ記事一覧</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -20,11 +20,12 @@
       padding: 2em;
       border-radius: 16px;
       width: 100%;
-      max-width: 520px;
+      max-width: 520px; /* index と同じ */
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
     }
-    h1, h2, h3 {
+    h1 {
+      text-align: center;
       margin-top: 0;
     }
     a {
@@ -37,25 +38,12 @@
       color: #e91e63;
       text-decoration: none;
     }
-    img {
-      display: block;
-      margin: 1em auto;
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
-    /* PCのみ1.5倍にスケーリング */
-    @media (min-width: 800px) {
-      .content-box {
-        transform: scale(1.5);
-        transform-origin: top center;
-      }
-    }
-    /* 記事カード */
     .post-list {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 1.5em;
+      justify-content: center;
+      margin-top: 2em;
     }
     .post-card {
       background: #fff;
@@ -63,6 +51,8 @@
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       transition: transform 0.2s, box-shadow 0.2s;
+      flex: 1 1 calc(100%); /* 初期は1列 */
+      max-width: 520px; /* index と同じ横幅 */
     }
     .post-card:hover {
       transform: translateY(-4px);
@@ -83,18 +73,23 @@
       color: #777;
       font-size: 0.85em;
     }
+
+    /* PC表示で3列 */
+    @media (min-width: 900px) {
+      .post-card {
+        flex: 1 1 calc((520px - 2em) / 3); /* カード幅を3分割調整 */
+      }
+    }
   </style>
 </head>
 <body>
   <div class="content-box">
- 
     <h1>ブログ記事一覧</h1>
     <div id="postList" class="post-list"></div>
     <p style="margin-top:1em;"><a href="all-posts.html">👉 すべての記事を見る</a></p>
   </div>
 
   <script>
-    // 記事データ（サムネ画像は適宜差し替え）
     const posts = [
       {title: "CCCD(コピーコントロールCD)とは？日本での導入と問題点、そして撤退まで", url:"cccd.html", date:"2025-09-04", img:"CCCD.jpg"},
       {title: "草彅剛とは？俳優としての魅力・音楽活動・人柄まで徹底解説", url:"kusanagitsuyoshi.html", date:"2025-06-14", img:"KT.jpg"},
@@ -104,7 +99,6 @@
       {title: "今さら聞けない「新しい地図」とは？活動内容・魅力・ファンとの絆まで徹底解説", url:"2025-06-10-post.html", date:"2025-06-10", img:"shsghs.jpg"}
     ];
 
-    // 日付で降順ソート
     posts.sort((a,b) => new Date(b.date) - new Date(a.date));
 
     const postList = document.getElementById("postList");
@@ -125,6 +119,3 @@
   </script>
 </body>
 </html>
-
-
-
