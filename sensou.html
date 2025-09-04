@@ -10,45 +10,71 @@
       font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
       background: #fafafa;
       color: #333;
-      max-width: 900px;
-      margin: auto;
-      padding: 2em;
+      margin: 0;
+      padding: 0;
       line-height: 1.7;
     }
-   header {
-  background: linear-gradient(90deg, #FFD700, #FFC107, #FFB300);
-  color: #333;
-  padding: 2rem 1rem;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
 
-    h1, h2 {
+    /* ヘッダー全画面幅 */
+    header {
+      background: linear-gradient(90deg, #FFD700, #FFC107, #FFB300);
+      color: #333;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    header div {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    header h1 {
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      margin: 0 0 0.5rem 0;
+    }
+    header img {
+      border-radius: 12px;
+      margin-top: 1rem;
+      max-height: 400px;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 1.5rem;
+      background: white;
+    }
+
+    h2 {
       margin-top: 2rem;
       border-bottom: 2px solid #eee;
-      padding-bottom: .3rem;
+      padding-bottom: 0.3rem;
     }
+
     .section {
       margin-bottom: 2em;
     }
-    img {
-  width: 100%;
-  max-height: 400px; /* 高さを少し増やす */
-  object-fit: contain; /* 全体を表示 */
-  border-radius: 8px;
-  margin: 1rem 0;
-}
+
+    img.section-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
 
     ul {
       padding-left: 1.2rem;
     }
+
     footer {
       text-align: center;
       padding: 1.5rem;
       font-size: 0.9rem;
       color: #666;
     }
+
     a {
       color: #0066cc;
       text-decoration: none;
@@ -59,32 +85,30 @@
   </style>
 </head>
 <body>
- <header style="background: linear-gradient(90deg, #FFD700, #FFC107, #FFB300); color:#333; padding:2rem 1rem; box-shadow:0 4px 8px rgba(0,0,0,0.15);">
-  <div style="max-width:900px; margin:auto; text-align:center;">
-    <h1 style="text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">草彅剛戦争シリーズまとめ</h1>
-    <p><small>投稿日：2025年9月5日</small></p>
-    <img src="zeni.jpg" alt="草彅剛 戦争シリーズ" style="border-radius:12px; margin-top:1rem; max-height:400px; object-fit:contain; width:100%;">
-  </div>
-</header>
-
-
+  <header>
+    <div>
+      <h1>草彅剛戦争シリーズまとめ</h1>
+      <p><small>投稿日：2025年9月5日</small></p>
+      <img src="zeni.jpg" alt="草彅剛 戦争シリーズ">
+    </div>
+  </header>
 
   <main>
     <div class="section">
-      <h2>💰 銭の戦争(2015年)</h2>
-      <img src="zeni.jpg" alt="銭の戦争">
+      <h2>💰 銭の戦争 (2015年)</h2>
+      <img src="zeni.jpg" alt="銭の戦争" class="section-img">
       <p>東大卒の元証券マン・白石富生（草彅剛）は父親の借金の連帯保証人となり、全ての財産を失う。失ったものを取り戻すため、金融の世界で成り上がろうと奮闘する物語。</p>
     </div>
 
     <div class="section">
-      <h2>🤥 嘘の戦争(2017年)</h2>
-      <img src="uso.jpg" alt="嘘の戦争">
+      <h2>🤥 嘘の戦争 (2017年)</h2>
+      <img src="uso.jpg" alt="嘘の戦争" class="section-img">
       <p>家族を惨殺された一ノ瀬浩一（草彅剛）は、詐欺師として復讐を遂げるため帰国。巧妙な嘘を駆使し、事件の真相に迫るサスペンス。</p>
     </div>
 
     <div class="section">
-      <h2>🕸 罠の戦争(2023年)</h2>
-      <img src="wana.jpg" alt="罠の戦争">
+      <h2>🕸 罠の戦争 (2023年)</h2>
+      <img src="wana.jpg" alt="罠の戦争" class="section-img">
       <p>恩義を感じて尽くしてきた政治家の秘書・鷲津亨（草彅剛）は、ある事件をきっかけに復讐を誓う。権力者や組織を相手に、巧妙な罠で相手を追い詰めるサスペンス。</p>
     </div>
 
@@ -100,10 +124,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
