@@ -67,6 +67,51 @@
         transform-origin: top center;
       }
     }
+    /* ボタンデザイン */
+.btn.btn--viewitem {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+  background: linear-gradient(90deg, #ff7aa2, #ffeb7a, #81c784); /* ピンク→黄→緑 */
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.btn.btn--viewitem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+.btn.btn--viewitem:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.btn__txt {
+  position: relative;
+  z-index: 1;
+}
+
+.btn__icon::before {
+  content: "➔";
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform .22s cubic-bezier(.2,.9,.3,1);
+}
+
+.btn--viewitem:hover .btn__icon::before {
+  transform: translateX(5px);
+}
+
   </style>
 
   <!-- Google Adsense -->
@@ -133,7 +178,14 @@
       <li><a href="youtube.html">YouTube収益化完全ガイド｜安全ジャンル・審査対策・成功のコツ</a></li>
       <li><a href="SMAPsongs.html">SMAPファン歴10年が選ぶ！まず聴くべき入門シングル曲8選</a></li>
     </ul>
-    <p><a href="all-posts.html">👉 すべての記事を見る</a></p>
+    <p>
+  <a class="btn btn--viewitem" href="all-posts.html">
+    <span class="btn__txt">すべての記事を見る</span>
+    <span class="btn__icon"></span>
+  </a>
+</p>
+
   </div>
 </body>
 </html>
+
