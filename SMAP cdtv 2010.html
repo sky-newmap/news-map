@@ -21,11 +21,15 @@
       padding: 1rem;
       text-align: center;
     }
-    header img {
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 0.5rem;
-    }
+   header img.header-img {
+  width: 100%;        /* 横幅いっぱい */
+  max-width: 600px;   /* PCでは大きすぎないように制限 */
+  height: auto;       /* アスペクト比を保持 */
+  display: block;
+  margin: 0 auto 1rem; /* 中央寄せ＆下に余白 */
+  border-radius: 8px;  /* 角丸は好みで */
+}
+
     main {
       max-width: 900px;
       margin: auto;
@@ -70,10 +74,11 @@
 </head>
 <body>
   <header>
-    <h1>SMAP CDTV年越しプレミアライブ2010→2011<br>伝説のセットリストを語る</h1>
-    <img src="CDTV2010.jpg" alt="CDTV2010→2011">
-    <p><small>投稿日：2025年9月6日</small></p>
-  </header>
+  <h1>SMAP CDTV年越しプレミアライブ2010→2011<br>伝説のセットリストを語る</h1>
+  <img src="CDTV2010.jpg" alt="CDTV2010→2011" class="header-img">
+  <p><small>投稿日：2025年9月6日</small></p>
+</header>
+
   <main>
     <div class="section">
       <p>SMAPの伝説的なテレビパフォーマンスといえば、<br>
@@ -128,6 +133,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
