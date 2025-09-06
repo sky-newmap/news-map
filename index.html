@@ -167,11 +167,21 @@
 .blog-card a:hover {
   color: #e91e63;
 }
-  @media (min-width: 800px) {
+ /* デフォルト（スマホなど）: 1列 */
+.blog-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 1em;
+}
+
+/* PC以上の画面: 3列に固定 */
+@media (min-width: 800px) {
   .blog-list {
-    grid-template-columns: repeat(3, 1fr); /* 3列固定 */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+
 
 </style>
 
@@ -180,6 +190,7 @@
 </div>
 </body>
 </html>
+
 
 
 
