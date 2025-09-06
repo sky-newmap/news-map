@@ -8,6 +8,11 @@
   </url>
 
   <!-- 記事ページ一覧 -->
+ <url>
+    <loc>https://news-map.blog/SMAPsongs.html</loc>
+    <lastmod>2025-09-06</lastmod>
+  </url>
+  
   <url>
     <loc>https://news-map.blog/SMAP%20cdtv%202010.html</loc>
     <lastmod>2025-09-06</lastmod>
@@ -89,3 +94,4 @@
   </url>
 
 </urlset>
+
