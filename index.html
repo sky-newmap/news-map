@@ -67,8 +67,7 @@
         transform-origin: top center;
       }
     }
-    /* ボタンデザイン */
-.btn.btn--viewitem {
+   .btn.btn--viewitem {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -79,14 +78,13 @@
   font-weight: 700;
   font-size: 1rem;
   line-height: 1;
-  color: #005a8d; /* ← 青に変更 */
-  background: linear-gradient(90deg, #ff7aa2, #ffeb7a, #81c784);
+  color: #fff; /* 文字色も白に戻す */
+  background: linear-gradient(90deg, #ff7aa2, #7ad3ff); /* ピンク→青 */
   text-decoration: none;
   border: none;
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
   transition: transform .18s ease, box-shadow .18s ease;
 }
-
 
 .btn.btn--viewitem:hover {
   transform: translateY(-3px);
@@ -112,6 +110,7 @@
 .btn--viewitem:hover .btn__icon::before {
   transform: translateX(5px);
 }
+
 
   </style>
 
@@ -189,6 +188,7 @@
   </div>
 </body>
 </html>
+
 
 
 
