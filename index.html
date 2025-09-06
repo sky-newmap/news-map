@@ -136,40 +136,48 @@
     <h2>自己紹介</h2>
 <h3 class="intro">
   19歳の大学生です!<br class="sp-br"><br class="pc-br">
-  フリーランスとして自立することを目標に,<br class="pc-br">
-  プログラミングを軸に様々なことに挑戦中です。<br class="sp-br"><br class="pc-br">
-  お仕事のご依頼お待ちしております！<br class="sp-br"><br class="pc-br">
-  連絡先：<a href="mailto:tianbianxiaomi@gmail.com">tianbianxiaomi@gmail.com</a>
+  フリーランスとして<br class="sp-br">自立することを目標に,<br class="pc-br">
+  プログラミングを軸に<br class="sp-br">様々なことに挑戦中です。<br class="sp-br"><br class="pc-br">
+  お仕事のご依頼<br class="sp-br">お待ちしております！<br class="sp-br"><br class="pc-br">
+  <span class="contact">連絡先：<a href="mailto:tianbianxiaomi@gmail.com">tianbianxiaomi@gmail.com</a></span>
 </h3>
 
 <style>
 /* PC用 */
 @media screen and (min-width: 768px) {
   .intro .pc-br {
-    display: inline; /* 改行表示 */
+    display: inline;
   }
   .intro .sp-br {
-    display: none; /* スマホ専用改行は非表示 */
+    display: none;
   }
   .intro {
     font-size: 20px;
     line-height: 1.6;
+  }
+  .intro .contact {
+    font-size: 20px; /* PCでも同じサイズ */
   }
 }
 
 /* スマホ用 */
 @media screen and (max-width: 767px) {
   .intro .pc-br {
-    display: none; /* PC用改行は非表示 */
+    display: none;
   }
   .intro .sp-br {
-    display: inline; /* スマホ用改行は表示 */
+    display: inline;
   }
   .intro {
-    font-size: 14px;
+    font-size: 20px; /* 基本文字サイズ20px */
     line-height: 1.4;
   }
+  .intro .contact {
+    font-size: 15px; /* 連絡先だけ小さく */
+  }
 }
+</style>
+
 </style>
 
 </style>
@@ -220,6 +228,7 @@
   </div>
 </body>
 </html>
+
 
 
 
