@@ -5,7 +5,6 @@
   <title>My Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- スタイル -->
   <style>
     /* 基本スタイル */
     body {
@@ -21,7 +20,6 @@
       box-sizing: border-box;
     }
 
-    /* コンテンツボックス */
     .content-box {
       background: rgba(255, 255, 255, 0.88);
       padding: 2em;
@@ -30,15 +28,12 @@
       max-width: 1200px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
-      transition: transform 0.3s ease;
     }
 
-    /* 見出し */
     h1, h2, h3 {
       margin-top: 0;
     }
 
-    /* リンク */
     a {
       color: #005a8d;
       font-weight: bold;
@@ -51,21 +46,12 @@
       text-decoration: none;
     }
 
-    /* 画像 */
     img {
       display: block;
       margin: 1em auto;
       max-width: 100%;
       height: auto;
       border-radius: 12px;
-    }
-
-    /* PCのみスケーリング */
-    @media (min-width: 800px) {
-      .content-box {
-        transform: scale(1.5);
-        transform-origin: top center;
-      }
     }
 
     /* Blogグリッド */
@@ -79,6 +65,7 @@
 
     .blog-item {
       flex: 1 1 calc(33.333% - 0.66em);
+      max-width: calc(33.333% - 0.66em);
       box-sizing: border-box;
       background: #fff;
       border-radius: 12px;
@@ -104,25 +91,15 @@
       transform: translateY(-4px);
     }
 
-    /* スマホ用：縦並び */
+    /* スマホ用：縦1列 */
     @media (max-width: 799px) {
       .blog-item {
         flex: 1 1 100%;
+        max-width: 100%;
       }
     }
   </style>
 
-  <!-- Google Adsense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7060918485502500" crossorigin="anonymous"></script>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QSBE5RSXG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-6QSBE5RSXG');
-  </script>
 </head>
 
 <body>
