@@ -22,10 +22,11 @@
       padding: 2em;
       border-radius: 16px;
       width: 100%;
-      max-width: 750px; /* PCでもコンパクト */
+      max-width: 750px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       box-sizing: border-box;
       margin: 2em auto;
+      font-size: 1rem; /* 基本フォントサイズ */
     }
 
     h1 {
@@ -112,13 +113,15 @@
       font-size: 0.85em;
     }
 
-    /* PC:ブログカード3列 */
+    /* PC以上:文字2倍 & ブログ3列 */
     @media (min-width: 800px) {
+      .content-box {
+        font-size: 2rem; /* 文字2倍 */
+      }
       .blog-list {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-
   </style>
 </head>
 <body>
