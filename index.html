@@ -134,19 +134,22 @@
     <img src="ワルイコあつまれキャラクター.jpg" alt="キャラクター画像">
 
     <h2>自己紹介</h2>
-    <h3 class="intro">
-  19歳の大学生です！<br>
-  フリーランスとして自立することを目標に<br>
-  プログラミングを軸に様々なことに挑戦中です。<br>
-  お仕事のご依頼お待ちしております！<br>
+<h3 class="intro">
+  19歳の大学生です!<br class="sp-br">
+  フリーランスとして自立することを目標に<br class="pc-br">
+  プログラミングを軸に様々なことに挑戦中です。<br class="pc-br">
+  お仕事のご依頼お待ちしております！<br class="pc-br">
   連絡先：<a href="mailto:tianbianxiaomi@gmail.com">tianbianxiaomi@gmail.com</a>
 </h3>
 
 <style>
-/* PC用：768px以上ではそのまま改行 */
+/* PC用 */
 @media screen and (min-width: 768px) {
-  .intro br {
-    display: inline; /* 通常の改行 */
+  .intro .pc-br {
+    display: inline; /* 改行表示 */
+  }
+  .intro .sp-br {
+    display: none; /* スマホ専用改行は非表示 */
   }
   .intro {
     font-size: 20px;
@@ -154,22 +157,21 @@
   }
 }
 
-/* スマホ用：767px以下では改行を減らす */
+/* スマホ用 */
 @media screen and (max-width: 767px) {
-  .intro br {
-    display: none; /* 改行を非表示 */
+  .intro .pc-br {
+    display: none; /* PC用改行は非表示 */
+  }
+  .intro .sp-br {
+    display: inline; /* スマホ用改行は表示 */
   }
   .intro {
     font-size: 16px;
     line-height: 1.4;
   }
-
-  /* スマホ向けに必要なら途中でだけ改行を入れる */
-  .intro::after {
-    content: "\A"; /* 文章の最後に改行 */
-    white-space: pre;
-  }
 }
+</style>
+
 </style>
 
     <h2>主な実績、資格など</h2>
@@ -218,6 +220,7 @@
   </div>
 </body>
 </html>
+
 
 
 
