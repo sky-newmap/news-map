@@ -109,6 +109,53 @@
     }
     .comment{font-size:.95rem;color:#333;}
     .notes{font-size:.9rem;color:var(--muted);margin-top:.8rem;border-top:1px dashed #eee;padding-top:.8rem;}
+    .related {
+  margin-top: 2rem;
+}
+.related h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.related-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+.related-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-decoration: none;
+  color: #222;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.related-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.related-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.related-card h3 {
+  font-size: 1rem;
+  padding: .6rem .8rem 0;
+  margin: 0;
+}
+.related-card .date {
+  font-size: .85rem;
+  color: #666;
+  padding: 0 .8rem .8rem;
+}
+@media (min-width: 720px) {
+  .related-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
     footer{
       max-width:var(--maxw);
       margin:1.2rem auto;
@@ -221,26 +268,21 @@
       </ul>
 
       <p class="notes">※補足：年はシングル発売年です。1～6,8は『SMAP 25 YEARS』、1,3,5,7は『SMAP AID』というベストアルバムに収録されているので、これらのアルバムから聴き始めるのがおすすめです。</p>
-      <section class="card">
+      <section class="related">
   <h2>関連記事</h2>
-  <ul class="list-entries">
-    <li class="entry">
-      <div class="thumb"><img src="CDTV2010.jpg" alt="記事タイトル1" style="width:100%;height:100%;object-fit:cover;border-radius:6px;"></div>
-      <div class="entry-content">
-        <h3><a href="SMAP%20cdtv%202010.html">記事タイトル1</a></h3>
-        <div class="meta-row">投稿日：2025年9月6日</div>
-        <p class="comment">記事の概要を1～2文で紹介。</p>
-      </div>
-    </li>
-    <li class="entry">
-      <div class="thumb"><img src="thumb2.jpg" alt="記事タイトル2" style="width:100%;height:100%;object-fit:cover;border-radius:6px;"></div>
-      <div class="entry-content">
-        <h3><a href="記事URL2.html">記事タイトル2</a></h3>
-        <div class="meta-row">投稿日：2025年○月○日</div>
-        <p class="comment">記事の概要を1～2文で紹介。</p>
-      </div>
-    </li>
-  </ul>
+  <div class="related-list">
+    <a href="SMAP%20cdtv%202010.html" class="related-card">
+      <img src="CDTV2010.jpg" alt="SMAP CDTV年越しライブ" />
+      <h3>SMAP CDTV年越しプレミアライブ2010→2011｜伝説のセットリストを語る</h3>
+      <p class="date">投稿日：2025-09-06</p>
+    </a>
+
+    <a href="nisa.html" class="related-card">
+      <img src="nisa-thumb.jpg" alt="NISA制度" />
+      <h3>NISA制度の仕組みと活用法を徹底解説</h3>
+      <p class="date">投稿日：2025-09-05</p>
+    </a>
+  </div>
 </section>
 
     </article>
@@ -253,18 +295,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
