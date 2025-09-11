@@ -111,15 +111,16 @@
 }
 
 .btn__icon::before {
-  content: "➔";
+  content: "←"; /* 矢印を左向きに */
   font-size: 1.1rem;
   display: inline-block;
   transition: transform .22s cubic-bezier(.2,.9,.3,1);
 }
 
 .btn--viewitem:hover .btn__icon::before {
-  transform: translateX(5px);
+  transform: translateX(-5px); /* 左に動く */
 }
+
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7060918485502500"
      crossorigin="anonymous"></script>
@@ -138,8 +139,8 @@
     <h1>ブログ記事一覧</h1>
     <div id="postList" class="post-list"></div>
     <a class="btn btn--viewitem" href="index.html">
-    <span class="btn__txt">ホームに戻る</span>
     <span class="btn__icon"></span>
+    <span class="btn__txt">ホームに戻る</span>
   </a>
   </div>
 
@@ -186,6 +187,7 @@
   </script>
 </body>
 </html>
+
 
 
 
