@@ -77,7 +77,26 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    .btn.btn--viewitem:hover {
+     .btn.btn--viewitem {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff; /* 文字色も白に戻す */
+  background: linear-gradient(90deg, #ff7aa2, #7ad3ff); /* ピンク→青 */
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.btn.btn--viewitem:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.18);
 }
@@ -92,7 +111,7 @@
 }
 
 .btn__icon::before {
-  content: "";
+  content: "➔";
   font-size: 1.1rem;
   display: inline-block;
   transition: transform .22s cubic-bezier(.2,.9,.3,1);
@@ -101,7 +120,6 @@
 .btn--viewitem:hover .btn__icon::before {
   transform: translateX(5px);
 }
-
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7060918485502500"
      crossorigin="anonymous"></script>
@@ -168,6 +186,7 @@
   </script>
 </body>
 </html>
+
 
 
 
