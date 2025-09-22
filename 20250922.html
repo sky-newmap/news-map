@@ -37,7 +37,7 @@
     header p.meta{margin:0.5rem 0;color:var(--muted);font-size:0.9rem}
     .lead{font-size:1rem;margin-bottom:1.2rem;line-height:1.6;text-align:center}
     .video-wrap{position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;background:#000;margin-top:1rem}
-    .video-wrap video{position:absolute;top:0;left:0;width:100%;height:100%}
+    .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
     .caption{text-align:center;font-size:0.85rem;color:var(--muted);margin-top:0.6rem}
     .meta-box{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-top:1rem}
     .meta-item{background:#f7f7fa;padding:0.5rem 0.9rem;border-radius:8px;font-size:0.9rem;color:var(--muted)}
@@ -53,10 +53,7 @@
     <p class="lead">2025年09月22日の世界部屋での走行を録画しました！</p>
 
     <div class="video-wrap">
-      <video controls poster="mk-wii-world-20250922.jpg">
-        <source src="/videos/IOHD0018.mp4" type="video/mp4">
-        お使いのブラウザは video タグをサポートしていません。
-      </video>
+      <iframe src="https://www.youtube.com/embed/kGc3fbAYs3s?si=OqP-CwJbF6iYs83U" allowfullscreen></iframe>
     </div>
     <p class="caption">マリオカートWii wiimmfi 世界部屋（2025.09.22）録画映像</p>
 
@@ -64,7 +61,7 @@
       <div class="meta-item">機種: Wii</div>
       <div class="meta-item">サーバー: wiimmfi</div>
       <div class="meta-item">日付: 2025-09-22</div>
-      <div class="meta-item">形式: MP4</div>
+      <div class="meta-item">形式: YouTube</div>
     </div>
 
     <footer style="margin-top:1.6rem;text-align:center;color:var(--muted);font-size:0.9rem">
