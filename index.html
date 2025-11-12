@@ -36,6 +36,30 @@
     background-size: cover;
     
   }
+  @media (max-width: 768px) {
+  body {
+    background: 
+      repeating-linear-gradient(
+        to right,
+        white 0%, white 10%, 
+        #0033a0 10%, #0033a0 18%,    /* 青 */ 
+        white 18%, white 28%, 
+        #ff0000 28%, #ff0000 36%,    /* 赤 */ 
+        white 36%, white 46%, 
+        #ff69b4 46%, #ff69b4 54%,    /* ピンク */ 
+        white 54%, white 64%, 
+        #ffd700 64%, #ffd700 72%,    /* 黄 */ 
+        white 72%, white 82%, 
+        #00cc66 82%, #00cc66 90%,    /* 緑 */ 
+        white 90%, white 100%
+      );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; /* または auto 100% でもOK */
+    background-position: center;
+  }
+}
+
 
   header {
     background: rgba(255,255,255,0.85);
@@ -148,6 +172,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
