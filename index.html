@@ -1,106 +1,126 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CD情報サイト｜news-map</title>
-  <style>
-    /* ======== 全体 ======== */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CD情報サイト｜news-map</title>
+<style>
+  body {
+    font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
+    margin: 0;
+    color: #222;
+    text-align: center;
+
+    /* ===== 背景ストライプ（横向き、ピンク棒中央を画面中央に） ===== */
+    background: 
+      repeating-linear-gradient(
+        to right,
+        white 0%, white 32%,
+        #0033a0 32%, #0033a0 36%,    /* 青 */
+        white 36%, white 40%,
+        #ff0000 40%, #ff0000 44%,    /* 赤 */
+        white 44%, white 48%,
+        #ff69b4 48%, #ff69b4 52%,    /* ピンク */
+        white 52%, white 56%,
+        #ffd700 56%, #ffd700 60%,    /* 黄 */
+        white 60%, white 64%,
+        #00cc66 64%, #00cc66 68%,    /* 緑 */
+        white 68%, white 100%
+      );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+  }
+
+  header {
+    background: rgba(255,255,255,0.85);
+    border-bottom: 1px solid #ddd;
+    padding: 1.5rem 0;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+  }
+
+  header h3 {
+    margin: 0.5rem 0 0;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  main {
+    padding: 3rem 1rem;
+    background: rgba(255,255,255,0.9);
+    margin: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .feature {
+    margin-bottom: 4rem;
+  }
+
+  .feature img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .feature h2 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .feature p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+
+  .artist-list {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .artist-link {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #333;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    background: white;
+  }
+
+  .artist-link:hover {
+    background: #f2f2f2;
+  }
+
+  footer {
+    border-top: 1px solid #ddd;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #777;
+    background: rgba(255,255,255,0.8);
+  }
+
+  @media (max-width: 768px) {
     body {
-      font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: #222;
-      text-align: center;
+      background-size: 100% auto;
+      background-position: 48% center; /* モバイルも同じ */
     }
-
-    /* ======== ヘッダー ======== */
-    header {
-      border-bottom: 1px solid #ddd;
-      padding: 1.5rem 0;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-      text-transform: lowercase; /* news-map は小文字のまま表示 */
-    }
-
-    header h3 {
-      margin: 0.5rem 0 0;
-      font-weight: normal;
-      font-size: 1rem;
-      color: #555;
-    }
-
-    /* ======== メイン ======== */
-    main {
-      padding: 3rem 1rem;
-    }
-
-    /* --- SMAP 25 YEARS セクション --- */
-    .feature {
-      margin-bottom: 4rem;
-      text-align: center;
-    }
-
-    .feature img {
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .feature h2 {
-      margin-top: 1rem;
-      font-size: 1.4rem;
-    }
-
-    .feature p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.6;
-      margin: 0.5rem 0;
-    }
-
-    /* ======== アーティスト選択 ======== */
-    main h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
-      color: #555;
-    }
-
-    .artist-list {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .artist-link {
-      display: inline-block;
-      border: 1px solid #ccc;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      color: #333;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .artist-link:hover {
-      background: #f2f2f2;
-    }
-
-    /* ======== フッター ======== */
-    footer {
-      border-top: 1px solid #ddd;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-      color: #777;
-      text-transform: lowercase;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <header>
@@ -109,10 +129,8 @@
   </header>
 
   <main>
-    <!-- SMAP 25 YEARS セクション -->
     <section class="feature">
       <img src="SMAP 25 YEARS.jpg" alt="SMAP 25 YEARS ジャケット">
-
       <h2>SMAP 25 YEARS（通常仕様）</h2>
       <p>2016.12.21 発売<br>
       3CD / VICL-64696～8<br>
@@ -120,7 +138,6 @@
       Victor Entertainment</p>
     </section>
 
-   
     <div class="artist-list">
       <a href="SMAP/index.html" class="artist-link">SMAP</a>
       <a href="others/index.html" class="artist-link">アーティスト一覧</a>
@@ -132,7 +149,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
