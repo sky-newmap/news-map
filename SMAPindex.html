@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7060918485502500"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAP アルバム一覧｜news-map.blog</title>
+  <meta name="description" content="SMAPのアルバム作品を一覧で紹介。代表作『SMAP 25 YEARS』など詳細ページへのリンクも掲載。">
+  <link rel="canonical" href="https://news-map.blog/SMAP/" />
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
+      margin: 0;
+      color: #222;
+      text-align: center;
+      background: 
+        repeating-linear-gradient(
+          to right,
+          white 0%, white 32%,
+          #0033a0 32%, #0033a0 36%,    /* 青 */
+          white 36%, white 40%,
+          #ff0000 40%, #ff0000 44%,    /* 赤 */
+          white 44%, white 48%,
+          #ff69b4 48%, #ff69b4 52%,    /* ピンク */
+          white 52%, white 56%,
+          #ffd700 56%, #ffd700 60%,    /* 黄 */
+          white 60%, white 64%,
+          #00cc66 64%, #00cc66 68%,    /* 緑 */
+          white 68%, white 100%
+        );
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background: 
+          repeating-linear-gradient(
+            to right,
+            white 0%, white 10%, 
+            #0033a0 10%, #0033a0 18%, 
+            white 18%, white 28%, 
+            #ff0000 28%, #ff0000 36%, 
+            white 36%, white 46%, 
+            #ff69b4 46%, #ff69b4 54%, 
+            white 54%, white 64%, 
+            #ffd700 64%, #ffd700 72%, 
+            white 72%, white 82%, 
+            #00cc66 82%, #00cc66 90%, 
+            white 90%, white 100%
+          );
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    header {
+      background: rgba(255,255,255,0.85);
+      border-bottom: 1px solid #ddd;
+      padding: 1.5rem 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      
+    }
+
+    header h3 {
+      margin: 0.5rem 0 0;
+      font-weight: normal;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    main {
+      padding: 3rem 1rem;
+      background: rgba(255,255,255,0.9);
+      margin: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .album-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .album {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 250px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .album:hover {
+      transform: translateY(-4px);
+    }
+
+    .album img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .album h2 {
+      font-size: 1.1rem;
+      margin: 0.8rem 0 0.4rem;
+    }
+
+    .album p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 3rem;
+      text-decoration: none;
+      color: #333;
+      border: 1px solid #ccc;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      background: white;
+      transition: background 0.2s;
+    }
+
+    .back-link:hover {
+      background: #f2f2f2;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: #777;
+      background: rgba(255,255,255,0.8);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SMAP</h1>
+    <h3>アルバム一覧</h3>
+  </header>
+
+  <main>
+    <div class="album-grid">
+
+      <div class="album">
+        <a href="detail/25years.html">
+          <img src="SMAP 25 YEARS.jpg" alt="SMAP 25 YEARS ジャケット">
+        </a>
+        <h2><a href="detail/25years.html" style="text-decoration:none; color:#222;">SMAP 25 YEARS</a></h2>
+        <p>2016.12.21発売 / ベストアルバム</p>
+      </div>
+
+      <div class="album">
+        <a href="detail/MIJ.html">
+          <img src="Otherside／愛が止まるまでは.jpg" alt="Otherside／愛が止まるまでは ジャケット">
+        </a>
+        <h2><a href="detail/MIJ.html" style="text-decoration:none; color:#222;">Otherside／愛が止まるまでは</a></h2>
+        <p>2015.09.09発売 / 55thSingle</p>
+      </div>
+
+    </div>
+
+    <a href="../index.html" class="back-link">← ホームへ戻る</a>
+  </main>
+
+  <footer>
+    <p>&copy; news-map.blog</p>
+  </footer>
+</body>
+</html>
