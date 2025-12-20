@@ -106,6 +106,23 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* ===== ライブ画像用 ===== */
+.live-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.live-shot {
+  width: 48%;
+  height: auto;
+  border-radius: 6px;
+}
+@media (max-width: 768px) {
+  .live-shot {
+    width: 100%;
+  }
+}
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
 </head>
@@ -124,31 +141,41 @@ a:hover {
   <div class="section">
     <h2>ダイナマイト</h2>
     <p>効果音の後にイントロが始まり、幕が上がるとライトが点灯。会場全体がパーティーの幕開けのような雰囲気でした。吾郎さんのショットも印象的です。</p>
-    <img src="SMAP CDTV 2010 (1).jpg" alt="吾郎さんショット">
+    <div class="live-row" style="justify-content:center;">
+      <img src="SMAP CDTV 2010 (1).jpg" alt="吾郎さんショット" class="live-shot">
+    </div>
   </div>
 
   <div class="section">
     <h2>BANG! BANG! バカンス!</h2>
     <p>ダイナマイトでは慎吾くんだけのソロパートでしたが、この曲からはメンバー全員のソロパートが増え、ライブ本編が本格的に始まった印象です。つよぽんのショットも見応えがありました。</p>
-    <img src="SMAP CDTV 2010 (2).jpg" alt="つよぽんショット">
-  </div>
+       <div class="live-row" style="justify-content:center;">
+      <img src="SMAP CDTV 2010 (2).jpg" alt="つよぽんショット" class="live-shot">
+    </div> 
+    </div>
 
   <div class="section">
     <h2>らいおんハート</h2>
-    <p>イントロは木村くんのショットから始まります。ここでバラードに入ると、アップで映るメンバーの表情やビジュアルの良さが際立っていました。リーダーや慎吾くんのショットも見応えがあります。</p>
-    <img src="SMAP CDTV 2010 (3).jpg" alt="木村くんイントロショット">
-    <img src="SMAP CDTV 2010 (4).jpg" alt="リーダーショット">
-    <img src="SMAP CDTV 2010 (5).jpg" alt="慎吾ちゃんショット">
+    <p>イントロは木村くんのショットから始まります。バラードに入ると、アップで映るメンバーの表情やビジュアルの良さが際立っていました。リーダーや慎吾くんのショットも見応えがあります。</p>
+    <div class="live-row" style="justify-content:center;">
+      <img src="SMAP CDTV 2010 (3).jpg" alt="木村くんショット" class="live-shot">
+    </div>
 
 
+    <div class="live-row" style="justify-content:center;">
+      <img src="SMAP CDTV 2010 (4).jpg" alt="リーダーショット" class="live-shot">
+      <img src="SMAP CDTV 2010 (5).jpg" alt="慎吾ちゃんショット" class="live-shot">
+    </div>
   </div>
 
   <div class="section">
     <h2>がんばりましょう</h2>
-    <p>全世代が知っている曲で会場も盛り上がります。歌い出しの吾郎さん（森君のおさがりパート）と木村くんのショットも印象的で、ライブの熱気を感じられました。</p>
-    <img src="SMAP CDTV 2010 (6).jpg" alt="吾郎さんショット">
-    <img src="SMAP CDTV 2010 (7).jpg" alt="木村くんショット">
+    <p>全世代が知っている曲で会場も盛り上がります。歌い出しの吾郎さん（森くんのおさがりパート）と木村くんのショットも印象的でした。</p>
+    <div class="live-row" style="justify-content:center;">
+        <img src="SMAP CDTV 2010 (6).jpg" alt="吾郎さんショット" class="live-shot">
+        <img src="SMAP CDTV 2010 (7).jpg" alt="木村くんショット" class="live-shot">
 
+    </div>
   </div>
 
   <!-- 広告 -->
@@ -185,3 +212,5 @@ a:hover {
 </footer>
 </body>
 </html>
+
+
