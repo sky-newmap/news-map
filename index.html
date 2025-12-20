@@ -73,23 +73,19 @@ main {
 }
 
 /* 右側情報 */
-.post-body {
-  flex: 1;
-}
-
 .post-body h2 {
   margin: 0 0 6px;
   font-size: 17px;
   line-height: 1.4;
 }
 
-/* ★ 通常：濃い青／hover：濃いピンク */
+/* 通常：濃い青／hover：濃いピンク */
 .post-body h2 a {
-  color: #0b57d0;        /* 濃い青 */
+  color: #0b57d0;
   text-decoration: none;
 }
 .post-body h2 a:hover {
-  color: #d81b60;        /* 濃いピンク */
+  color: #d81b60;
   text-decoration: underline;
 }
 
@@ -102,7 +98,6 @@ main {
 .excerpt {
   font-size: 14px;
   line-height: 1.6;
-  color: #333;
 }
 
 /* ===== サイドバー ===== */
@@ -118,31 +113,46 @@ aside {
 }
 
 .side-box h3 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   font-size: 14px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 6px;
 }
 
-.side-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* ===== おすすめ記事（YouTube風） ===== */
+.recommend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.side-box li {
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-
-/* ★ 最新記事：太字＋濃色 */
-.side-box li a {
-  font-weight: bold;
-  color: #0b57d0;
+.recommend-item a {
+  display: block;
   text-decoration: none;
 }
 
-.side-box li a:hover {
+/* サムネ */
+.recommend-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.recommend-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* タイトル */
+.recommend-title {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #0b57d0;
+}
+.recommend-item a:hover .recommend-title {
   color: #d81b60;
   text-decoration: underline;
 }
@@ -167,15 +177,12 @@ footer {
   .container {
     flex-direction: column;
   }
-
   .post-card {
     flex-direction: column;
   }
-
   .thumbnail {
     width: 100%;
   }
-
   aside {
     width: auto;
   }
@@ -198,7 +205,7 @@ footer {
 
   <article class="post-card">
     <a class="thumbnail" href="SMAP cdtv 2010.html">
-      <img src="CDTV2010.jpg" alt="SMAP CDTV 2010 サムネイル">
+      <img src="CDTV2010.jpg" alt="SMAP CDTV 2010">
     </a>
     <div class="post-body">
       <h2>
@@ -209,21 +216,23 @@ footer {
       </h2>
       <div class="meta">2025年09月06日｜SMAP</div>
       <p class="excerpt">
-        SMAPが『CDTV年越しプレミアライブ2010→2011』で披露した<br>
+        SMAPが『CDTV年越しプレミアライブ2010→2011』で披露した
         ヒットシングルメドレーを振り返る。
       </p>
     </div>
   </article>
-
-  <article class="post-card">
+<article class="post-card">
     <a class="thumbnail" href="SMAPsongs.html">
-      <img src="smap25.jpg" alt="SMAPサムネイル">
+      <img src="smap25.jpg" alt="SMAP">
     </a>
     <div class="post-body">
-      <h2><a href="post2.html">SMAPファン歴10年が選ぶ！<br>まず聴くべき入門シングル曲8選</a></h2>
+      <h2>
+        <a href="SMAPsongs.html">
+          SMAPファン歴10年が選ぶ！<br>まず聴くべき入門シングル曲8選        </a>
+      </h2>
       <div class="meta">2025年09月06日｜SMAP</div>
       <p class="excerpt">
-        どの曲から聴けば良いかわからない方向けに、<br>「まずここから聴いて！」というシングルを8曲セレクト。
+        どの曲から聴けば良いかわからない方向けに<br>、「まずここから聴いて！」というシングルを8曲セレクト。
       </p>
     </div>
   </article>
@@ -241,19 +250,22 @@ footer {
   </div>
 
   <div class="side-box">
-    <h3>最新記事</h3>
-    <ul>
-      <li>
+    <h3>おすすめ記事</h3>
+
+    <div class="recommend-list">
+
+      <div class="recommend-item">
         <a href="SMAP cdtv 2010.html">
-          SMAP CDTV年越しプレミアライブ2010→2011
+          <div class="recommend-thumb">
+            <img src="CDTV2010.jpg" alt="">
+          </div>
+          <div class="recommend-title">
+            SMAP CDTV年越しプレミアライブ2010→2011
+          </div>
         </a>
-      </li>
-      <li>
-        <a href="SMAPsongs.html">
-          まず聴くべき入門シングル曲8選
-        </a>
-      </li>
-    </ul>
+      </div>
+
+    
   </div>
 
 </aside>
@@ -262,7 +274,7 @@ footer {
 
 <footer>
   <div class="footer-inner">
-    © 2025 ブログ名
+    © 2025 ぱむブログ
   </div>
 </footer>
 
