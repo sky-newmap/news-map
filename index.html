@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>ブログタイトル</title>
+<title>ホーム</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ブログの説明文">
+<meta name="description" content="SMAPについて語るブログ">
 
 <style>
 body {
@@ -83,11 +83,13 @@ main {
   line-height: 1.4;
 }
 
+/* ★ 通常：濃い青／hover：濃いピンク */
 .post-body h2 a {
-  color: #000;
+  color: #0b57d0;        /* 濃い青 */
   text-decoration: none;
 }
 .post-body h2 a:hover {
+  color: #d81b60;        /* 濃いピンク */
   text-decoration: underline;
 }
 
@@ -120,6 +122,29 @@ aside {
   font-size: 14px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 6px;
+}
+
+.side-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-box li {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* ★ 最新記事：太字＋濃色 */
+.side-box li a {
+  font-weight: bold;
+  color: #0b57d0;
+  text-decoration: none;
+}
+
+.side-box li a:hover {
+  color: #d81b60;
+  text-decoration: underline;
 }
 
 /* ===== フッター ===== */
@@ -162,8 +187,8 @@ footer {
 
 <header>
   <div class="header-inner">
-    <h1>ブログタイトル</h1>
-    <p>YouTubeサムネ風の記事一覧ブログ</p>
+    <h1>ぱむブログ</h1>
+    <p>SMAPについて語るブログ</p>
   </div>
 </header>
 
@@ -171,16 +196,21 @@ footer {
 
 <main>
 
-  <!-- 記事カード -->
   <article class="post-card">
     <a class="thumbnail" href="SMAP cdtv 2010.html">
-      <img src="CDTV2010.jpg" alt="記事サムネイル">
+      <img src="CDTV2010.jpg" alt="SMAP CDTV 2010 サムネイル">
     </a>
     <div class="post-body">
-      <h2><a href="SMAP cdtv 2010.html">SMAP CDTV年越しプレミアライブ2010→2011 <br>伝説のセットリストを語る</a></h2>
+      <h2>
+        <a href="SMAP cdtv 2010.html">
+          SMAP CDTV年越しプレミアライブ2010→2011<br>
+          伝説のセットリストを語る
+        </a>
+      </h2>
       <div class="meta">2025年09月06日｜SMAP</div>
       <p class="excerpt">
-        SMAPが『CDTV年越しプレミアライブ2010→2011』で披露した<br>ヒットシングルメドレーを振り返る。
+        SMAPが『CDTV年越しプレミアライブ2010→2011』で披露した<br>
+        ヒットシングルメドレーを振り返る。
       </p>
     </div>
   </article>
@@ -201,12 +231,31 @@ footer {
 </main>
 
 <aside>
+
   <div class="side-box">
     <h3>管理人プロフィール</h3>
     <p style="font-size:13px;margin:0;">
-      2013年からのお茶の間ファンで、解散後も動画を漁っていたが、2022年より推しに。好きな曲は『This is love』
+      2013年からのお茶の間ファンで、解散後も動画を漁っていたが、
+      2022年より本格的に推しに。好きな曲は『This is love』。
     </p>
   </div>
+
+  <div class="side-box">
+    <h3>最新記事</h3>
+    <ul>
+      <li>
+        <a href="SMAP cdtv 2010.html">
+          SMAP CDTV年越しプレミアライブ2010→2011
+        </a>
+      </li>
+      <li>
+        <a href="post2.html">
+          2つ目の記事タイトル
+        </a>
+      </li>
+    </ul>
+  </div>
+
 </aside>
 
 </div>
@@ -219,3 +268,4 @@ footer {
 
 </body>
 </html>
+
