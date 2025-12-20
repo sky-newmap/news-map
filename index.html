@@ -1,177 +1,221 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7060918485502500"
-     crossorigin="anonymous"></script>
 <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>news-map.blog ホーム｜SMAP情報サイト</title>
-  <meta name="description" content="SMAPをはじめとした情報を紹介するニュース＆データサイト。最新情報やアーティストのまとめをチェック。">
-  <link rel="canonical" href="https://news-map.blog/" />
+<title>ブログタイトル</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CD情報サイト｜news-map</title>
-<style>
-  body {
-    font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
-    margin: 0;
-    color: #222;
-    text-align: center;
+<meta name="description" content="ブログの説明文">
 
-    /* ===== 背景ストライプ（横向き、ピンク棒中央を画面中央に） ===== */
-    background: 
-      repeating-linear-gradient(
-        to right,
-        white 0%, white 32%,
-        #0033a0 32%, #0033a0 36%,    /* 青 */
-        white 36%, white 40%,
-        #ff0000 40%, #ff0000 44%,    /* 赤 */
-        white 44%, white 48%,
-        #ff69b4 48%, #ff69b4 52%,    /* ピンク */
-        white 52%, white 56%,
-        #ffd700 56%, #ffd700 60%,    /* 黄 */
-        white 60%, white 64%,
-        #00cc66 64%, #00cc66 68%,    /* 緑 */
-        white 68%, white 100%
-      );
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    
-  }
-  @media (max-width: 768px) {
-  body {
-    background: 
-      repeating-linear-gradient(
-        to right,
-        white 0%, white 10%, 
-        #0033a0 10%, #0033a0 18%,    /* 青 */ 
-        white 18%, white 28%, 
-        #ff0000 28%, #ff0000 36%,    /* 赤 */ 
-        white 36%, white 46%, 
-        #ff69b4 46%, #ff69b4 54%,    /* ピンク */ 
-        white 54%, white 64%, 
-        #ffd700 64%, #ffd700 72%,    /* 黄 */ 
-        white 72%, white 82%, 
-        #00cc66 82%, #00cc66 90%,    /* 緑 */ 
-        white 90%, white 100%
-      );
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; /* または auto 100% でもOK */
-    background-position: center;
-  }
+<style>
+body {
+  margin: 0;
+  font-family: Meiryo, "Hiragino Kaku Gothic ProN", sans-serif;
+  background: #f0f0f0;
+  color: #333;
 }
 
+/* ===== ヘッダー ===== */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+header p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #666;
+}
 
-  header {
-    background: rgba(255,255,255,0.85);
-    border-bottom: 1px solid #ddd;
-    padding: 1.5rem 0;
+/* ===== レイアウト ===== */
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 12px;
+  display: flex;
+  gap: 16px;
+}
+
+/* ===== メイン ===== */
+main {
+  flex: 1;
+}
+
+/* ===== 記事カード ===== */
+.post-card {
+  display: flex;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  padding: 12px;
+}
+
+/* サムネ */
+.thumbnail {
+  width: 240px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 右側情報 */
+.post-body {
+  flex: 1;
+}
+
+.post-body h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.post-body h2 a {
+  color: #000;
+  text-decoration: none;
+}
+.post-body h2 a:hover {
+  text-decoration: underline;
+}
+
+.meta {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.excerpt {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ===== サイドバー ===== */
+aside {
+  width: 280px;
+}
+
+.side-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.side-box h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+
+/* ===== フッター ===== */
+footer {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+
+/* ===== スマホ ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
 
-  header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    text-transform: lowercase;
+  .post-card {
+    flex-direction: column;
   }
 
-  header h3 {
-    margin: 0.5rem 0 0;
-    font-weight: normal;
-    font-size: 1rem;
-    color: #555;
+  .thumbnail {
+    width: 100%;
   }
 
-  main {
-    padding: 3rem 1rem;
-    background: rgba(255,255,255,0.9);
-    margin: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  aside {
+    width: auto;
   }
-
-  .feature {
-    margin-bottom: 4rem;
-  }
-
-  .feature img {
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  }
-
-  .feature h2 {
-    margin-top: 1rem;
-    font-size: 1.4rem;
-  }
-
-  .feature p {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.6;
-    margin: 0.5rem 0;
-  }
-
-  .artist-list {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .artist-link {
-    display: inline-block;
-    border: 1px solid #ccc;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    color: #333;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
-    background: white;
-  }
-
-  .artist-link:hover {
-    background: #f2f2f2;
-  }
-
-  footer {
-    border-top: 1px solid #ddd;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: #777;
-    background: rgba(255,255,255,0.8);
-  }
-
- 
+}
 </style>
 </head>
+
 <body>
-  <header>
-    <h1>news-map.blog</h1>
-    <h3>SMAPをはじめとしたCD情報サイト</h3>
-  </header>
-  <main>
-    <section class="feature">
-      <img src="SMAP 25 YEARS.jpg" alt="SMAP 25 YEARS ジャケット">
-      <h2>SMAP 25 YEARS（通常仕様）</h2>
-      <p>2016.12.21 発売<br>
-      3CD / VICL-64696～8<br>
-      ¥4,290(税込)<br>
-      Victor Entertainment</p>
-    </section>
 
-    <div class="artist-list">
-      <a href="SMAPindex.html" class="artist-link">SMAP</a>
-      <a href="others/index.html" class="artist-link">アーティスト一覧</a>
+<header>
+  <div class="header-inner">
+    <h1>ブログタイトル</h1>
+    <p>YouTubeサムネ風の記事一覧ブログ</p>
+  </div>
+</header>
+
+<div class="container">
+
+<main>
+
+  <!-- 記事カード -->
+  <article class="post-card">
+    <a class="thumbnail" href="post1.html">
+      <img src="CDTV2010.jpg" alt="記事サムネイル">
+    </a>
+    <div class="post-body">
+      <h2><a href="SMAP cdtv 2010.html">記事タイトルが入ります（YouTube風）</a></h2>
+      <div class="meta">2025年12月20日｜SMAP</div>
+      <p class="excerpt">
+        記事の概要文が入ります。動画タイトル下の説明文のような役割です。
+      </p>
     </div>
-  </main>
+  </article>
 
-  <footer>
-    <p>&copy; news-map.blog</p>
-  </footer>
+  <article class="post-card">
+    <a class="thumbnail" href="post2.html">
+      <img src="img/post2.jpg" alt="記事サムネイル">
+    </a>
+    <div class="post-body">
+      <h2><a href="post2.html">2つ目の記事タイトル</a></h2>
+      <div class="meta">2025年12月18日｜レビュー</div>
+      <p class="excerpt">
+        サムネ画像が主役なので、テキストは短めが相性いいです。
+      </p>
+    </div>
+  </article>
+
+</main>
+
+<aside>
+  <div class="side-box">
+    <h3>プロフィール</h3>
+    <p style="font-size:13px;margin:0;">
+      管理人プロフィール文
+    </p>
+  </div>
+</aside>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    © 2025 ブログ名
+  </div>
+</footer>
+
 </body>
 </html>
-
-
