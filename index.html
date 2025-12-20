@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>ホーム</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SMAPについて語るブログ">
 
 <style>
 body {
@@ -44,7 +43,7 @@ header p {
 }
 
 /* ===== メイン ===== */
-main {
+.main-area {
   flex: 1;
 }
 
@@ -58,7 +57,6 @@ main {
   padding: 12px;
 }
 
-/* サムネ */
 .thumbnail {
   width: 240px;
   aspect-ratio: 16 / 9;
@@ -72,14 +70,13 @@ main {
   object-fit: cover;
 }
 
-/* 右側情報 */
 .post-body h2 {
   margin: 0 0 6px;
   font-size: 17px;
   line-height: 1.4;
 }
 
-/* 通常：濃い青／hover：濃いピンク */
+/* 濃い青 → hover 濃いピンク */
 .post-body h2 a {
   color: #0b57d0;
   text-decoration: none;
@@ -101,8 +98,10 @@ main {
 }
 
 /* ===== サイドバー ===== */
-aside {
+.side-area {
   width: 280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .side-box {
@@ -119,19 +118,7 @@ aside {
   padding-bottom: 6px;
 }
 
-/* ===== おすすめ記事（YouTube風） ===== */
-.recommend-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.recommend-item a {
-  display: block;
-  text-decoration: none;
-}
-
-/* サムネ */
+/* ===== おすすめ記事 ===== */
 .recommend-thumb {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -145,12 +132,14 @@ aside {
   object-fit: cover;
 }
 
-/* タイトル */
 .recommend-title {
   font-size: 13px;
   font-weight: bold;
-  line-height: 1.5;
   color: #0b57d0;
+  line-height: 1.5;
+}
+.recommend-item a {
+  text-decoration: none;
 }
 .recommend-item a:hover .recommend-title {
   color: #d81b60;
@@ -172,18 +161,26 @@ footer {
   color: #777;
 }
 
-/* ===== スマホ ===== */
+/* ===== スマホ：並び替え ===== */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
+
+  /* スマホ表示順 */
+  .recommend-box { order: 1; } /* おすすめ */
+  .profile-box   { order: 2; } /* 自己紹介 */
+  .main-area     { order: 3; } /* 一覧 */
+
   .post-card {
     flex-direction: column;
   }
+
   .thumbnail {
     width: 100%;
   }
-  aside {
+
+  .side-area {
     width: auto;
   }
 }
@@ -201,59 +198,43 @@ footer {
 
 <div class="container">
 
-<main>
+  <!-- メイン（記事一覧） -->
+  <main class="main-area">
+    <article class="post-card">
+      <a class="thumbnail" href="SMAP cdtv 2010.html">
+        <img src="CDTV2010.jpg" alt="">
+      </a>
+      <div class="post-body">
+        <h2>
+          <a href="SMAP cdtv 2010.html">
+            SMAP CDTV年越しプレミアライブ2010→2011<br>
+            伝説のセットリストを語る
+          </a>
+        </h2>
+        <div class="meta">2025年09月06日｜SMAP</div>
+        <p class="excerpt">
+          SMAPが披露したヒットシングルメドレーを振り返る。
+        </p>
+      </div>
+    </article>
+  </main>
 
-  <article class="post-card">
-    <a class="thumbnail" href="SMAP cdtv 2010.html">
-      <img src="CDTV2010.jpg" alt="SMAP CDTV 2010">
-    </a>
-    <div class="post-body">
-      <h2>
-        <a href="SMAP cdtv 2010.html">
-          SMAP CDTV年越しプレミアライブ2010→2011<br>
-          伝説のセットリストを語る
-        </a>
-      </h2>
-      <div class="meta">2025年09月06日｜SMAP</div>
-      <p class="excerpt">
-        SMAPが『CDTV年越しプレミアライブ2010→2011』で披露した
-        ヒットシングルメドレーを振り返る。
+  <!-- サイドバー（PC基準） -->
+  <aside class="side-area">
+
+    <!-- PCでは上：自己紹介 -->
+    <div class="side-box profile-box">
+      <h3>管理人プロフィール</h3>
+      <p style="font-size:13px;margin:0;">
+        2013年からのお茶の間ファン。
+        2022年より本格的に推しに。
+        好きな曲は『This is love』。
       </p>
     </div>
-  </article>
-<article class="post-card">
-    <a class="thumbnail" href="SMAPsongs.html">
-      <img src="smap25.jpg" alt="SMAP">
-    </a>
-    <div class="post-body">
-      <h2>
-        <a href="SMAPsongs.html">
-          SMAPファン歴10年が選ぶ！<br>まず聴くべき入門シングル曲8選        </a>
-      </h2>
-      <div class="meta">2025年09月06日｜SMAP</div>
-      <p class="excerpt">
-        どの曲から聴けば良いかわからない方向けに<br>、「まずここから聴いて！」というシングルを8曲セレクト。
-      </p>
-    </div>
-  </article>
 
-</main>
-
-<aside>
-
-  <div class="side-box">
-    <h3>管理人プロフィール</h3>
-    <p style="font-size:13px;margin:0;">
-      2013年からのお茶の間ファンで、解散後も動画を漁っていたが、
-      2022年より本格的に推しに。好きな曲は『This is love』。
-    </p>
-  </div>
-
-  <div class="side-box">
-    <h3>おすすめ記事</h3>
-
-    <div class="recommend-list">
-
+    <!-- PCでは下：おすすめ -->
+    <div class="side-box recommend-box">
+      <h3>おすすめ記事</h3>
       <div class="recommend-item">
         <a href="SMAP cdtv 2010.html">
           <div class="recommend-thumb">
@@ -264,11 +245,9 @@ footer {
           </div>
         </a>
       </div>
+    </div>
 
-    
-  </div>
-
-</aside>
+  </aside>
 
 </div>
 
